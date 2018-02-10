@@ -14,7 +14,11 @@ class CategoriesController extends Controller
      */
     public function index()
     {
-        $categories = Category::all();
+        //em vez de chamar o metodo :: all chamar o paginate para colocar páginação.
+        // tem que configrar na view :  {{$categories->links()}}
+
+        $categories = Category::query()->paginate(10);
+
         return view('.categories.index',compact('categories'));
     }
 
