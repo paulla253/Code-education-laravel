@@ -1,4 +1,4 @@
-@extends('layouts.app)
+@extends('layouts.app')
 
 @section('content')
 
@@ -13,7 +13,6 @@
         </div>
 
         <div class="row">
-
             <table class="table table-striped">
 
                 <thead>
@@ -36,14 +35,4 @@
                 </tbody>
             </table>
         </div>
-    </div>
-
-
-
-
-
-
-
-
-
     </div>
