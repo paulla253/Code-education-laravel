@@ -20,6 +20,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 
 Route::group(['middleware'=>'auth'],function(){
-    Route::resource('categories','CategoriesController');
+    //não irá criar a rota show.
+    Route::resource('categories','CategoriesController',['except' => 'show']);
 
 });
