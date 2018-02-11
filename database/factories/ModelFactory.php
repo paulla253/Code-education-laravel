@@ -33,3 +33,14 @@ $factory->define(App\Category::class, function (Faker\Generator $faker) {
     ];
 });
 
+$factory->define(App\Book::class, function (Faker\Generator $faker) {
+    static $password;
+
+    return [
+        //ucfirst ==Mudar a primeira letra para maisculo.
+        'title' => ucfirst($faker->unique()->word),
+        'subtitle'=> ucfirst($faker->name),
+        'price'=>$faker->randomFloat(2,10,200),
+    ];
+});
+

@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Book' => $baseDir . '/app/Book.php',
     'App\\Category' => $baseDir . '/app/Category.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
@@ -13,6 +14,7 @@ return array(
     'App\\Http\\Controllers\\Auth\\LoginController' => $baseDir . '/app/Http/Controllers/Auth/LoginController.php',
     'App\\Http\\Controllers\\Auth\\RegisterController' => $baseDir . '/app/Http/Controllers/Auth/RegisterController.php',
     'App\\Http\\Controllers\\Auth\\ResetPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ResetPasswordController.php',
+    'App\\Http\\Controllers\\BooksController' => $baseDir . '/app/Http/Controllers/BooksController.php',
     'App\\Http\\Controllers\\CategoriesController' => $baseDir . '/app/Http/Controllers/CategoriesController.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
     'App\\Http\\Controllers\\HomeController' => $baseDir . '/app/Http/Controllers/HomeController.php',
@@ -61,6 +63,7 @@ return array(
     'Barryvdh\\Reflection\\DocBlock\\Tag\\VarTag' => $vendorDir . '/barryvdh/reflection-docblock/src/Barryvdh/Reflection/DocBlock/Tag/VarTag.php',
     'Barryvdh\\Reflection\\DocBlock\\Tag\\VersionTag' => $vendorDir . '/barryvdh/reflection-docblock/src/Barryvdh/Reflection/DocBlock/Tag/VersionTag.php',
     'Barryvdh\\Reflection\\DocBlock\\Type\\Collection' => $vendorDir . '/barryvdh/reflection-docblock/src/Barryvdh/Reflection/DocBlock/Type/Collection.php',
+    'BooksTableSeeder' => $baseDir . '/database/seeds/BooksTableSeeder.php',
     'Carbon\\Carbon' => $vendorDir . '/nesbot/carbon/src/Carbon/Carbon.php',
     'Carbon\\CarbonInterval' => $vendorDir . '/nesbot/carbon/src/Carbon/CarbonInterval.php',
     'Carbon\\Exceptions\\InvalidDateException' => $vendorDir . '/nesbot/carbon/src/Carbon/Exceptions/InvalidDateException.php',
@@ -87,6 +90,7 @@ return array(
     'Collective\\Html\\HtmlBuilder' => $vendorDir . '/laravelcollective/html/src/HtmlBuilder.php',
     'Collective\\Html\\HtmlFacade' => $vendorDir . '/laravelcollective/html/src/HtmlFacade.php',
     'Collective\\Html\\HtmlServiceProvider' => $vendorDir . '/laravelcollective/html/src/HtmlServiceProvider.php',
+    'CreateBooksTable' => $baseDir . '/database/migrations/2018_02_11_182624_create_books_table.php',
     'CreateCategoriesTable' => $baseDir . '/database/migrations/2018_02_10_101540_create_categories_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
     'CreateUsersTable' => $baseDir . '/database/migrations/2014_10_12_000000_create_users_table.php',
