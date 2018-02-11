@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Category;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\Request;
 
 class CategoriesController extends Controller
@@ -63,14 +64,22 @@ class CategoriesController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int  $category
      * @return \Illuminate\Http\Response
      */
 
-
-    public function edit($id)
+    //Apenas mostrar a edição da categoria.
+    //pode passar o objeto como parametro,para não precisar olhar a existe do id no banco
+    public function edit(Category $category)
     {
-        //
+        //caso for passado o id :
+            // se não encontrar a categoria.
+    //        if( !($category = Category::find($id)))
+    //        {
+    //            throw  new ModelNotFoundException("Categoria naõ encontrada.");
+    //        }
+
+        return view('categories.edit',compact('category'));
     }
 
     /**
@@ -80,9 +89,18 @@ class CategoriesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Category $category)
     {
-        //
+    //         se não encontrar a categoria.
+    //        if( !($category = Category::find($id)))
+    //        {
+    //            throw  new ModelNotFoundException("Categoria naõ encontrada.");
+    //        }
+
+            $category->fill($request ->all());
+            $category->save();
+
+            return redirect()->route('categories.index');
     }
 
     /**

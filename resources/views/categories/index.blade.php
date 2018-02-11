@@ -19,16 +19,19 @@
                 <tr>
                     <th>ID</th>
                     <th>Nome</th>
+                    <th>Ações</th>
                 </tr>
                 </thead>
 
                 <tbody>
 
-                @foreach ($categories as $categroy)
+                @foreach ($categories as $category)
                     <tr>
-                        <td> {{$categroy->id}}</td>
-                        <td> {{$categroy->name}}</td>
-                        <td>Ações</td>
+                        <td> {{$category->id}}</td>
+                        <td> {{$category->name}}</td>
+                        <td>
+                            <a href="{{route ('categories.edit',['category'=>$category->id])}}">Editar</a>
+                        </td>
                     </tr>
 
                 @endforeach
