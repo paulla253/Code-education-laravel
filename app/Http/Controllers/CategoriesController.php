@@ -27,9 +27,11 @@ class CategoriesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    //mostra o metodo de criação.
     public function create()
     {
-        //
+        return view('categories.create');
     }
 
     /**
@@ -38,9 +40,13 @@ class CategoriesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
+
+    //precisa configurar na model para fazer o insert no banco.
     public function store(Request $request)
     {
-        //
+        Category::create($request->all());
+        return redirect()->route('categories.index');
     }
 
     /**
@@ -60,6 +66,8 @@ class CategoriesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
+
     public function edit($id)
     {
         //
