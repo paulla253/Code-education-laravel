@@ -24,3 +24,9 @@ Route::group(['middleware'=>'auth'],function(){
     Route::resource('categories','CategoriesController',['except' => 'show']);
 
 });
+
+Route::group(['middleware'=>'auth'],function(){
+    //não irá criar a rota show.
+    Route::resource('books','BooksController',['except' => 'show']);
+
+});
