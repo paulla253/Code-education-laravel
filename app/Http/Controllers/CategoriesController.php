@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Category;
+use App\Http\Requests\CategoryRequest;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\Request;
 
@@ -44,7 +45,8 @@ class CategoriesController extends Controller
 
 
     //precisa configurar na model para fazer o insert no banco.
-    public function store(Request $request)
+    //Modificado a Request para CategoryRequest que foi criada .
+    public function store(CategoryRequest $request)
     {
         Category::create($request->all());
         return redirect()->route('categories.index');
@@ -89,7 +91,7 @@ class CategoriesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Category $category)
+    public function update(CategoryRequest $request, Category $category)
     {
     //         se não encontrar a categoria.
     //        if( !($category = Category::find($id)))
