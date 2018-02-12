@@ -30,7 +30,7 @@ class BooksController extends Controller
      */
     public function create()
     {
-        //
+        return view('books.create');
     }
 
     /**
@@ -41,7 +41,9 @@ class BooksController extends Controller
      */
     public function store(Request $request)
     {
-        //
+//        return "Teste";
+        Book::create($request->all());
+        return redirect()->route('books.index');
     }
 
     /**
@@ -50,10 +52,10 @@ class BooksController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-        //
-    }
+//    public function show($id)
+//    {
+//        //
+//    }
 
     /**
      * Show the form for editing the specified resource.
@@ -61,9 +63,9 @@ class BooksController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Book $book)
     {
-        //
+        return view('books.edit',compact('book'));
     }
 
     /**
@@ -73,9 +75,12 @@ class BooksController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Book $book)
     {
-        //
+        $book->fill($request ->all());
+        $book->save();
+
+        return redirect()->route('books.index');
     }
 
     /**
@@ -84,8 +89,9 @@ class BooksController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Book $book)
     {
-        //
+        $book->delete();
+        return redirect()->route('books.index');
     }
 }

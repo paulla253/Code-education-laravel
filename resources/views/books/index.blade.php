@@ -8,7 +8,7 @@
 
             <h3>Listagem de livros</h3>
 
-                <a href="{{route('books.create')}}" class="btn btn-primary">Nova Categoria</a>
+                <a href="{{route('books.create')}}" class="btn btn-primary">Novos Livros</a>
         </div>
 
         <div class="row">
@@ -16,7 +16,9 @@
                 <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Nome</th>
+                    <th>Titulo</th>
+                    <th>Subtitulo</th>
+                    <th>Valor</th>
                     <th>Ações</th>
                 </tr>
                 </thead>
@@ -30,24 +32,24 @@
                         <td> {{$book->subtitle}}</td>
                         <td> {{$book->price}}</td>
                         <td>
-                            {{--<ul>--}}
-                                {{--<li>--}}
-                                        {{--<a href="{{route ('categories.edit',['category'=>$category->id])}}">Editar</a>--}}
-                                {{--</li>--}}
-                                {{--<li>--}}
-                                    {{--<?php $deleteForm="delete-form-{$loop->index}" ?>--}}
+                            <ul>
+                                <li>
+                                        <a href="{{route ('books.edit',['book'=>$book->id])}}">Editar</a>
+                                </li>
+                                <li>
+                                    <?php $deleteForm="delete-form-{$loop->index}" ?>
 
-                                    {{--<a href="{{route ('categories.destroy',['category'=>$category->id])}}"--}}
-                                       {{--onclick="event.preventDefault();document.getElementById('{{$deleteForm}}').submit()">--}}
-                                        {{--Excluir</a>--}}
+                                    <a href="{{route ('books.destroy',['book'=>$book->id])}}"
+                                       onclick="event.preventDefault();document.getElementById('{{$deleteForm}}').submit()">
+                                        Excluir</a>
 
-                                        {{--{!! Form::open(['route'=>['categories.destroy','category'=>$category->id],--}}
-                                        {{--'method' =>'DELETE','id'=>$deleteForm,'style'=>'display:none']) !!}--}}
+                                        {!! Form::open(['route'=>['books.destroy','book'=>$book->id],
+                                        'method' =>'DELETE','id'=>$deleteForm,'style'=>'display:none']) !!}
 
-                                        {{--{!! Form::close() !!}--}}
-                                {{--</li>--}}
+                                        {!! Form::close() !!}
+                                </li>
 
-                            {{--</ul>--}}
+                            </ul>
                         </td>
                     </tr>
 
