@@ -35,6 +35,7 @@ return array(
     'League\\Flysystem\\' => array($vendorDir . '/league/flysystem/src'),
     'Illuminate\\' => array($vendorDir . '/laravel/framework/src/Illuminate'),
     'Faker\\' => array($vendorDir . '/fzaninotto/faker/src/Faker'),
+    'DummyClasses\\' => array($vendorDir . '/patricktalmadge/bootstrapper/tests/DummyClasses'),
     'Dotenv\\' => array($vendorDir . '/vlucas/phpdotenv/src'),
     'Doctrine\\Instantiator\\' => array($vendorDir . '/doctrine/instantiator/src/Doctrine/Instantiator'),
     'Doctrine\\Common\\Inflector\\' => array($vendorDir . '/doctrine/inflector/lib/Doctrine/Common/Inflector'),
@@ -46,6 +47,7 @@ return array(
     'Collective\\Html\\' => array($vendorDir . '/laravelcollective/html/src'),
     'ClassPreloader\\' => array($vendorDir . '/classpreloader/classpreloader/src'),
     'Carbon\\' => array($vendorDir . '/nesbot/carbon/src/Carbon'),
+    'Bootstrapper\\' => array($vendorDir . '/patricktalmadge/bootstrapper/src/Bootstrapper'),
     'Barryvdh\\LaravelIdeHelper\\' => array($vendorDir . '/barryvdh/laravel-ide-helper/src'),
     'App\\' => array($baseDir . '/app'),
 );
