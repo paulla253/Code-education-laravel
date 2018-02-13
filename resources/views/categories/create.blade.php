@@ -18,25 +18,20 @@
 
             {!! Form::open(['route'=>'categories.store','class' =>'form']) !!}
 
-            <div class="form-group{{$errors->first('name')? ' has-error': ''}}">
+                <!--Para criar essa estrutura(FormGroup) foi criado funções Providers>AppServiceProvider)
+                {!!Html::openFormGroup('name',$errors) !!}
 
-                {!! Form::label('name','Nome',['class'=>'control-label']) !!}
+                    {!! Form::label('name','Nome',['class'=>'control-label']) !!}
+                    {!! Form::text('name',null,['class'=>'form-control']) !!}
+                    <!--Configurado um template em errors e modificado
+                    o arquivo Providers>AppServiceProvider função boot -->
+                    {!! Form::error('name',$errors) !!}
 
-                {!! Form::text('name',null,['class'=>'form-control']) !!}
+                {!!Html::closeFormGroup() !!}
 
-                <!--Configurado um template em errors e modificado
-                o arquivo Providers>AppServiceProvider função boot -->
-
-                {!! Form::error('name',$errors) !!}
-
-            </div>
-
-
-            <div class="form-group">
-
-                {!! Form::submit('Criar categoria',['class' =>'btn btn-primary']) !!}
-
-            </div>
+                {!!Html::openFormGroup() !!}
+                    {!! Form::submit('Criar categoria',['class' =>'btn btn-primary']) !!}
+                {!!Html::closeFormGroup() !!}
 
             {!! Form::close() !!}
 

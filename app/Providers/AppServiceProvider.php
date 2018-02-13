@@ -13,6 +13,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        //Chamando o layout de erro
         \Form::macro('error',function($field,$errors)
         {
             if($errors->has($field))
@@ -20,6 +21,17 @@ class AppServiceProvider extends ServiceProvider
                 return view ('errors.error_field',compact('field'));
             }
             return null;
+        });
+
+        //Criado tratamento de erros para FormGroup
+        \Html::macro('openFormGroup',function($field = null,$errors =null)
+        {
+            $hasError= ($field != null and $errors != null and $errors->has($field)) ?' has-error': ' ';
+            return "<div class=\"form-group{$hasError}\">";
+        });
+
+        \Html::macro('closeFormGroup',function() {
+            return '</div>';
         });
     }
 
