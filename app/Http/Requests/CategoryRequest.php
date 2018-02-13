@@ -32,20 +32,20 @@ class CategoryRequest extends FormRequest
         ];
     }
 
-    //traduzir mensagens de erros.
-    public function messages()
-    {
-        return [
-            'required' => "O :attribute é requerido.",
-            'unique' => "O :attribute digitado está em uso",
-        ];
-    }
-
-    //traduzir o attribute que pode ser utilizado de forma dinamica.
-    public function attributes()
-    {
-        return [
-            'name' => 'nome',
-            ];
-    }
+//    //traduzir mensagens de erros.
+//    public function messages()
+//    {
+//        return [
+//            'required' => "O :attribute é requerido.",
+//            'unique' => "O :attribute digitado está em uso",
+//        ];
+//    }
+//
+//    //traduzir o attribute que pode ser utilizado de forma dinamica.
+//    public function attributes()
+//    {
+//        return [
+//            'name' => 'nome',
+//            ];
+//    }
 }

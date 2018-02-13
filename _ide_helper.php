@@ -1,7 +1,7 @@
 <?php
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.3.31 on 2018-02-11 18:59:41.
+ * Generated for Laravel 5.3.31 on 2018-02-13 12:55:33.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -11638,6 +11638,16 @@ namespace Collective\Html {
         {
             return \Collective\Html\FormBuilder::componentCall($method, $parameters);
         }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function error($field, $errors)
+        {
+            return \Collective\Html\FormBuilder::error($field, $errors);
+        }
          
     }
 
@@ -12020,6 +12030,26 @@ namespace Collective\Html {
         public static function componentCall($method, $parameters)
         {
             return \Collective\Html\HtmlBuilder::componentCall($method, $parameters);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function openFormGroup($field = null, $errors = null)
+        {
+            return \Collective\Html\HtmlBuilder::openFormGroup($field, $errors);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function closeFormGroup()
+        {
+            return \Collective\Html\HtmlBuilder::closeFormGroup();
         }
          
     }
