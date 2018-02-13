@@ -241,7 +241,7 @@ return [
         'Carousel' => Bootstrapper\Facades\Carousel::class,
         'ControlGroup' => Bootstrapper\Facades\ControlGroup::class,
         'DropdownButton' => Bootstrapper\Facades\DropdownButton::class,
-        'Form' => Bootstrapper\Facades\Form::class,
+//        'Form' => Bootstrapper\Facades\Form::class,
         'Helpers' => Bootstrapper\Facades\Helpers::class,
         'Icon' => Bootstrapper\Facades\Icon::class,
         'InputGroup' => Bootstrapper\Facades\InputGroup::class,
