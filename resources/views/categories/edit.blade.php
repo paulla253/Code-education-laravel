@@ -11,18 +11,17 @@
              'class'=>'form','method'=>'PUT']) !!}
                 {{----}}
 
-                <div class="form-group">
+                {!!Html::openFormGroup('name',$errors) !!}
 
-                    {!! Form::label('name','Nome') !!}
+                    {!! Form::label('name','Nome',['class'=>'control-label']) !!}
                     {!! Form::text('name',null,['class'=>'form-control']) !!}
+                    {!! Form::error('name',$errors) !!}
 
-                </div>
+                {!!Html::closeFormGroup() !!}
 
-                <div class="form-group">
-
+                {!!Html::openFormGroup() !!}
                     {!! Form::submit('Salvar categoria',['class' =>'btn btn-primary']) !!}
-
-                </div>
+                {!!Html::closeFormGroup() !!}
 
             {!! Form::close() !!}
 

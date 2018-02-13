@@ -18,7 +18,7 @@
 
             {!! Form::open(['route'=>'categories.store','class' =>'form']) !!}
 
-                <!--Para criar essa estrutura(FormGroup) foi criado funções Providers>AppServiceProvider)
+                <!--Para criar essa estrutura(FormGroup) foi criado funções Providers>AppServiceProvider -->
                 {!!Html::openFormGroup('name',$errors) !!}
 
                     {!! Form::label('name','Nome',['class'=>'control-label']) !!}
