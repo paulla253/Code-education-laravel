@@ -7,24 +7,28 @@
 
             <h3>Nova categoria</h3>
 
-            <!00
-             @if($errors->any())
-                     <ul class="alert alert-danger list-inline">
-                        @foreach($errors->all() as $error)
-                            <li>{{$error}}</li>
-                        @endforeach
-                    </ul>
-                @endif
+            <!--Tratamento de erro da primeira maneira-->
+             {{--@if($errors->any())--}}
+                     {{--<ul class="alert alert-danger list-inline">--}}
+                        {{--@foreach($errors->all() as $error)--}}
+                            {{--<li>{{$error}}</li>--}}
+                        {{--@endforeach--}}
+                    {{--</ul>--}}
+                {{--@endif--}}
 
             {!! Form::open(['route'=>'categories.store','class' =>'form']) !!}
 
-            <div class="form-group">
+            <div class="form-group{{$errors->first('name')? ' has-error': ''}}">
 
-                {!! Form::label('name','Nome') !!}
+                {!! Form::label('name','Nome',['class'=>'control-label']) !!}
 
                 {!! Form::text('name',null,['class'=>'form-control']) !!}
 
-{{--                {{($errors->first('name'))}}--}}
+                <!--Configurado um template em errors e modificado
+                o arquivo Providers>AppServiceProvider função boot -->
+
+                {!! Form::error('name',$errors) !!}
+
             </div>
 
 
