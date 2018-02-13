@@ -7,7 +7,14 @@
 
             <h3>Nova categoria</h3>
 
-            {{--@include('errors._erros_form')--}}
+            <!00
+             @if($errors->any())
+                     <ul class="alert alert-danger list-inline">
+                        @foreach($errors->all() as $error)
+                            <li>{{$error}}</li>
+                        @endforeach
+                    </ul>
+                @endif
 
             {!! Form::open(['route'=>'categories.store','class' =>'form']) !!}
 
@@ -17,6 +24,7 @@
 
                 {!! Form::text('name',null,['class'=>'form-control']) !!}
 
+{{--                {{($errors->first('name'))}}--}}
             </div>
 
 
