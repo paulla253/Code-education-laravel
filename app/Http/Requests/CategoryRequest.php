@@ -25,10 +25,27 @@ class CategoryRequest extends FormRequest
     {
         //Regra unique : passa o nome da tabela,campo e o $id para ser ignorado.
 
-        $category=$this->route('category');
-        $id=$category ? $category->id:NULL;
+        $category = $this->route('category');
+        $id = $category ? $category->id : NULL;
         return [
-            'name' =>"required | max:255|unique:categories,name,$id"
+            'name' => "required | max:255|unique:categories,name,$id"
         ];
+    }
+
+    //traduzir mensagens de erros.
+    public function messages()
+    {
+        return [
+            'required' => "O :attribute é requerido.",
+            'unique' => "O :attribute digitado está em uso",
+        ];
+    }
+
+    //traduzir o attribute que pode ser utilizado de forma dinamica.
+    public function attributes()
+    {
+        return [
+            'name' => 'nome',
+            ];
     }
 }
