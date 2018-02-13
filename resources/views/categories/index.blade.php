@@ -5,10 +5,10 @@
     <div class="container">
 
         <div class="row">
-
             <h3>Listagem de categorias</h3>
-
-                <a href="{{route('categories.create')}}" class="btn btn-primary">Nova Categoria</a>
+                {{--Maneiras diferentes para criar o Botão : --}}
+                {!! Button::primary('Nova Categoria')->asLinkTo(route('categories.create')) !!}
+                {{--<a href="{{route('categories.create')}}" class="btn btn-primary">Nova Categoria</a>--}}
         </div>
 
         <div class="row">

@@ -14,7 +14,7 @@
                  @include('categories._form')
 
                 {!!Html::openFormGroup() !!}
-                    {!! Form::submit('Salvar categoria',['class' =>'btn btn-primary']) !!}
+                    {!! Button::primary('Salvar Categoria')->submit() !!}
                 {!!Html::closeFormGroup() !!}
 
             {!! Form::close() !!}
