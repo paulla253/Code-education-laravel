@@ -1,7 +1,7 @@
 <?php
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.3.31 on 2018-02-13 17:34:35.
+ * Generated for Laravel 5.3.31 on 2018-02-18 14:06:07.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -11042,458 +11042,9 @@ namespace Illuminate\Support\Facades {
  
 }
 
-namespace Bootstrapper\Facades { 
+namespace Collective\Html { 
 
-    class Form {
-        
-        /**
-         * Create a submit button element.
-         *
-         * @param string|null $value The value of the submit button
-         * @param array $options The options
-         * @return string 
-         * @param string $value
-         * @param array $options
-         * @return \Illuminate\Support\HtmlString 
-         * @static 
-         */ 
-        public static function submit($value = null, $options = array())
-        {
-            return \Bootstrapper\Form::submit($value, $options);
-        }
-        
-        /**
-         * Create a form label element.
-         *
-         * @param string $name The name of the object this label will be
-         *                             attached to
-         * @param string|null $value The text of the label
-         * @param array $options The options of the label
-         * @return string 
-         * @param string $name
-         * @param string $value
-         * @param array $options
-         * @param bool $escape_html
-         * @return \Illuminate\Support\HtmlString 
-         * @static 
-         */ 
-        public static function label($name, $value = null, $options = array(), $escape_html = true)
-        {
-            return \Bootstrapper\Form::label($name, $value, $options, $escape_html);
-        }
-        
-        /**
-         * Opens an inline form
-         *
-         * @param array $attributes The attributes of the array
-         * @return string 
-         * @static 
-         */ 
-        public static function inline($attributes = array())
-        {
-            return \Bootstrapper\Form::inline($attributes);
-        }
-        
-        /**
-         * Opens a horizontal form
-         *
-         * @param array $attributes
-         * @return string 
-         * @static 
-         */ 
-        public static function horizontal($attributes = array())
-        {
-            return \Bootstrapper\Form::horizontal($attributes);
-        }
-        
-        /**
-         * Creates a validation block
-         *
-         * @param string $type The type of validation
-         * @param string $label The label
-         * @param string $input The input
-         * @param array $attributes The attributes of the validation block
-         * @return string 
-         * @static 
-         */ 
-        public static function validation($type, $label, $input, $attributes = array())
-        {
-            return \Bootstrapper\Form::validation($type, $label, $input, $attributes);
-        }
-        
-        /**
-         * Creates a success validation block
-         *
-         * @param string $label The label
-         * @param string $input The input
-         * @param array $attributes The attributes of the validation block
-         * @return string 
-         * @see Bootstrapper\\Form::validation()
-         * @static 
-         */ 
-        public static function success($label, $input, $attributes = array())
-        {
-            return \Bootstrapper\Form::success($label, $input, $attributes);
-        }
-        
-        /**
-         * Creates a warning validation block
-         *
-         * @param string $label The label
-         * @param string $input The input
-         * @param array $attributes The attributes of the validation block
-         * @return string 
-         * @see Bootstrapper\\Form::validation()
-         * @static 
-         */ 
-        public static function warning($label, $input, $attributes = array())
-        {
-            return \Bootstrapper\Form::warning($label, $input, $attributes);
-        }
-        
-        /**
-         * Creates an error validation block
-         *
-         * @param string $label The label
-         * @param string $input The input
-         * @param array $attributes The attributes of the validation block
-         * @return string 
-         * @see Bootstrapper\\Form::validation()
-         * @static 
-         */ 
-        public static function error($label, $input, $attributes = array())
-        {
-            return \Bootstrapper\Form::error($label, $input, $attributes);
-        }
-        
-        /**
-         * Creates a feedback block with an icon
-         *
-         * @param string $label The label
-         * @param string $input The input
-         * @param string $icon The icon
-         * @param array $attributes The attributes of the block
-         * @return string 
-         * @static 
-         */ 
-        public static function feedback($label, $input, $icon, $attributes = array())
-        {
-            return \Bootstrapper\Form::feedback($label, $input, $icon, $attributes);
-        }
-        
-        /**
-         * Creates a help block
-         *
-         * @param string $helpText The help text
-         * @param array $attributes
-         * @return string 
-         * @static 
-         */ 
-        public static function help($helpText, $attributes = array())
-        {
-            return \Bootstrapper\Form::help($helpText, $attributes);
-        }
-        
-        /**
-         * Opens a horizontal form with a given model
-         *
-         * @param mixed $model
-         * @param array $attributes
-         * @return string 
-         * @see Bootstrapper\Form::horizontal()
-         * @see Illuminate\Html::model()
-         * @static 
-         */ 
-        public static function horizontalModel($model, $attributes = array())
-        {
-            return \Bootstrapper\Form::horizontalModel($model, $attributes);
-        }
-        
-        /**
-         * Opens a inline form with a given model
-         *
-         * @param mixed $model
-         * @param array $attributes
-         * @return string 
-         * @see Bootstrapper\Form::inline()
-         * @see Illuminate\Html::model()
-         * @static 
-         */ 
-        public static function inlineModel($model, $attributes = array())
-        {
-            return \Bootstrapper\Form::inlineModel($model, $attributes);
-        }
-        
-        /**
-         * Create a select box field.
-         *
-         * @param string $name
-         * @param array $list
-         * @param null $selected
-         * @param array $attributes
-         * @return string 
-         * @param string $name
-         * @param array $list
-         * @param string $selected
-         * @param array $options
-         * @return \Illuminate\Support\HtmlString 
-         * @static 
-         */ 
-        public static function select($name, $list = array(), $selected = null, $attributes = array())
-        {
-            return \Bootstrapper\Form::select($name, $list, $selected, $attributes);
-        }
-        
-        /**
-         * Create a textarea input field.
-         *
-         * @param string $name The name of the text area
-         * @param string|null $value The default value
-         * @param array $attributes The attributes of the text area
-         * @return string 
-         * @param string $name
-         * @param string $value
-         * @param array $options
-         * @return \Illuminate\Support\HtmlString 
-         * @static 
-         */ 
-        public static function textarea($name, $value = null, $attributes = array())
-        {
-            return \Bootstrapper\Form::textarea($name, $value, $attributes);
-        }
-        
-        /**
-         * Create a password input field.
-         *
-         * @param string $name The name of the password input
-         * @param array $attributes The attributes of the input
-         * @return string 
-         * @param string $name
-         * @param array $options
-         * @return \Illuminate\Support\HtmlString 
-         * @static 
-         */ 
-        public static function password($name, $attributes = array())
-        {
-            return \Bootstrapper\Form::password($name, $attributes);
-        }
-        
-        /**
-         * Create a text input field.
-         *
-         * @param string $name The name of the text input
-         * @param string|null $value The default value
-         * @param array $attributes The attributes of the input
-         * @return string 
-         * @param string $name
-         * @param string $value
-         * @param array $options
-         * @return \Illuminate\Support\HtmlString 
-         * @static 
-         */ 
-        public static function text($name, $value = null, $attributes = array())
-        {
-            return \Bootstrapper\Form::text($name, $value, $attributes);
-        }
-        
-        /**
-         * Create an e-mail input field.
-         *
-         * @param string $name The name of the email input
-         * @param string|null $value The default value of the input
-         * @param array $attributes The attributes of the email input
-         * @return string 
-         * @param string $name
-         * @param string $value
-         * @param array $options
-         * @return \Illuminate\Support\HtmlString 
-         * @static 
-         */ 
-        public static function email($name, $value = null, $attributes = array())
-        {
-            return \Bootstrapper\Form::email($name, $value, $attributes);
-        }
-        
-        /**
-         * Creates a datetime form element
-         *
-         * @param string $name The name of the element
-         * @param null $value The value
-         * @param array $attributes The attributes
-         * @return string 
-         * @see Illuminate\FormBuilder\input()
-         * @static 
-         */ 
-        public static function datetime($name, $value = null, $attributes = array())
-        {
-            return \Bootstrapper\Form::datetime($name, $value, $attributes);
-        }
-        
-        /**
-         * Creates a datetime local element
-         *
-         * @param string $name The name of the element
-         * @param null $value
-         * @param array $attributes
-         * @return string 
-         * @see Illuminate\FormBuilder\input()
-         * @static 
-         */ 
-        public static function datetimelocal($name, $value = null, $attributes = array())
-        {
-            return \Bootstrapper\Form::datetimelocal($name, $value, $attributes);
-        }
-        
-        /**
-         * Creates a date input
-         *
-         * @param string $name The name of the element
-         * @param null $value
-         * @param array $attributes
-         * @return string 
-         * @static 
-         */ 
-        public static function date($name, $value = null, $attributes = array())
-        {
-            return \Bootstrapper\Form::date($name, $value, $attributes);
-        }
-        
-        /**
-         * Creates a month input
-         *
-         * @param string $name The name of the element
-         * @param null $value
-         * @param array $attributes
-         * @return string 
-         * @static 
-         */ 
-        public static function month($name, $value = null, $attributes = array())
-        {
-            return \Bootstrapper\Form::month($name, $value, $attributes);
-        }
-        
-        /**
-         * Creates a week form element
-         *
-         * @param string $name The name of the element
-         * @param null $value
-         * @param array $attributes
-         * @return string 
-         * @static 
-         */ 
-        public static function week($name, $value = null, $attributes = array())
-        {
-            return \Bootstrapper\Form::week($name, $value, $attributes);
-        }
-        
-        /**
-         * Creates a time form element
-         *
-         * @param string $name The name of the element
-         * @param null $value
-         * @param array $attributes
-         * @return string 
-         * @static 
-         */ 
-        public static function time($name, $value = null, $attributes = array())
-        {
-            return \Bootstrapper\Form::time($name, $value, $attributes);
-        }
-        
-        /**
-         * Creates a number form element
-         *
-         * @param string $name The name of the element
-         * @param null $value
-         * @param array $attributes
-         * @return string 
-         * @static 
-         */ 
-        public static function number($name, $value = null, $attributes = array())
-        {
-            return \Bootstrapper\Form::number($name, $value, $attributes);
-        }
-        
-        /**
-         * Creates a url form element
-         *
-         * @param string $name The name of the element
-         * @param null $value
-         * @param array $attributes
-         * @return string 
-         * @static 
-         */ 
-        public static function url($name, $value = null, $attributes = array())
-        {
-            return \Bootstrapper\Form::url($name, $value, $attributes);
-        }
-        
-        /**
-         * Creates a search element
-         *
-         * @param string $name The name of the element
-         * @param null $value
-         * @param array $attributes
-         * @return string 
-         * @static 
-         */ 
-        public static function search($name, $value = null, $attributes = array())
-        {
-            return \Bootstrapper\Form::search($name, $value, $attributes);
-        }
-        
-        /**
-         * Creates a tel element
-         *
-         * @param string $name The name of the element
-         * @param null $value
-         * @param array $attributes
-         * @return string 
-         * @static 
-         */ 
-        public static function tel($name, $value = null, $attributes = array())
-        {
-            return \Bootstrapper\Form::tel($name, $value, $attributes);
-        }
-        
-        /**
-         * Creates a color element
-         *
-         * @param string $name The name of the element
-         * @param null $value
-         * @param array $attributes
-         * @return string 
-         * @static 
-         */ 
-        public static function color($name, $value = null, $attributes = array())
-        {
-            return \Bootstrapper\Form::color($name, $value, $attributes);
-        }
-        
-        /**
-         * Determine whether the form element with the given name
-         * has any validation errors.
-         *
-         * @param string $name
-         * @return bool 
-         * @static 
-         */ 
-        public static function hasErrors($name)
-        {
-            return \Bootstrapper\Form::hasErrors($name);
-        }
-        
-        /**
-         * Get the formatted errors for the form element with the given name.
-         *
-         * @param string $name
-         * @return string 
-         * @static 
-         */ 
-        public static function getFormattedError($name)
-        {
-            return \Bootstrapper\Form::getFormattedError($name);
-        }
+    class FormFacade {
         
         /**
          * Open up a new HTML form.
@@ -11504,8 +11055,7 @@ namespace Bootstrapper\Facades {
          */ 
         public static function open($options = array())
         {
-            //Method inherited from \Collective\Html\FormBuilder            
-            return \Bootstrapper\Form::open($options);
+            return \Collective\Html\FormBuilder::open($options);
         }
         
         /**
@@ -11518,8 +11068,7 @@ namespace Bootstrapper\Facades {
          */ 
         public static function model($model, $options = array())
         {
-            //Method inherited from \Collective\Html\FormBuilder            
-            return \Bootstrapper\Form::model($model, $options);
+            return \Collective\Html\FormBuilder::model($model, $options);
         }
         
         /**
@@ -11531,8 +11080,7 @@ namespace Bootstrapper\Facades {
          */ 
         public static function setModel($model)
         {
-            //Method inherited from \Collective\Html\FormBuilder            
-            \Bootstrapper\Form::setModel($model);
+            \Collective\Html\FormBuilder::setModel($model);
         }
         
         /**
@@ -11543,8 +11091,7 @@ namespace Bootstrapper\Facades {
          */ 
         public static function close()
         {
-            //Method inherited from \Collective\Html\FormBuilder            
-            return \Bootstrapper\Form::close();
+            return \Collective\Html\FormBuilder::close();
         }
         
         /**
@@ -11555,8 +11102,22 @@ namespace Bootstrapper\Facades {
          */ 
         public static function token()
         {
-            //Method inherited from \Collective\Html\FormBuilder            
-            return \Bootstrapper\Form::token();
+            return \Collective\Html\FormBuilder::token();
+        }
+        
+        /**
+         * Create a form label element.
+         *
+         * @param string $name
+         * @param string $value
+         * @param array $options
+         * @param bool $escape_html
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function label($name, $value = null, $options = array(), $escape_html = true)
+        {
+            return \Collective\Html\FormBuilder::label($name, $value, $options, $escape_html);
         }
         
         /**
@@ -11571,8 +11132,34 @@ namespace Bootstrapper\Facades {
          */ 
         public static function input($type, $name, $value = null, $options = array())
         {
-            //Method inherited from \Collective\Html\FormBuilder            
-            return \Bootstrapper\Form::input($type, $name, $value, $options);
+            return \Collective\Html\FormBuilder::input($type, $name, $value, $options);
+        }
+        
+        /**
+         * Create a text input field.
+         *
+         * @param string $name
+         * @param string $value
+         * @param array $options
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function text($name, $value = null, $options = array())
+        {
+            return \Collective\Html\FormBuilder::text($name, $value, $options);
+        }
+        
+        /**
+         * Create a password input field.
+         *
+         * @param string $name
+         * @param array $options
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function password($name, $options = array())
+        {
+            return \Collective\Html\FormBuilder::password($name, $options);
         }
         
         /**
@@ -11586,8 +11173,119 @@ namespace Bootstrapper\Facades {
          */ 
         public static function hidden($name, $value = null, $options = array())
         {
-            //Method inherited from \Collective\Html\FormBuilder            
-            return \Bootstrapper\Form::hidden($name, $value, $options);
+            return \Collective\Html\FormBuilder::hidden($name, $value, $options);
+        }
+        
+        /**
+         * Create an e-mail input field.
+         *
+         * @param string $name
+         * @param string $value
+         * @param array $options
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function email($name, $value = null, $options = array())
+        {
+            return \Collective\Html\FormBuilder::email($name, $value, $options);
+        }
+        
+        /**
+         * Create a tel input field.
+         *
+         * @param string $name
+         * @param string $value
+         * @param array $options
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function tel($name, $value = null, $options = array())
+        {
+            return \Collective\Html\FormBuilder::tel($name, $value, $options);
+        }
+        
+        /**
+         * Create a number input field.
+         *
+         * @param string $name
+         * @param string $value
+         * @param array $options
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function number($name, $value = null, $options = array())
+        {
+            return \Collective\Html\FormBuilder::number($name, $value, $options);
+        }
+        
+        /**
+         * Create a date input field.
+         *
+         * @param string $name
+         * @param string $value
+         * @param array $options
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function date($name, $value = null, $options = array())
+        {
+            return \Collective\Html\FormBuilder::date($name, $value, $options);
+        }
+        
+        /**
+         * Create a datetime input field.
+         *
+         * @param string $name
+         * @param string $value
+         * @param array $options
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function datetime($name, $value = null, $options = array())
+        {
+            return \Collective\Html\FormBuilder::datetime($name, $value, $options);
+        }
+        
+        /**
+         * Create a datetime-local input field.
+         *
+         * @param string $name
+         * @param string $value
+         * @param array $options
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function datetimeLocal($name, $value = null, $options = array())
+        {
+            return \Collective\Html\FormBuilder::datetimeLocal($name, $value, $options);
+        }
+        
+        /**
+         * Create a time input field.
+         *
+         * @param string $name
+         * @param string $value
+         * @param array $options
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function time($name, $value = null, $options = array())
+        {
+            return \Collective\Html\FormBuilder::time($name, $value, $options);
+        }
+        
+        /**
+         * Create a url input field.
+         *
+         * @param string $name
+         * @param string $value
+         * @param array $options
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function url($name, $value = null, $options = array())
+        {
+            return \Collective\Html\FormBuilder::url($name, $value, $options);
         }
         
         /**
@@ -11600,8 +11298,36 @@ namespace Bootstrapper\Facades {
          */ 
         public static function file($name, $options = array())
         {
-            //Method inherited from \Collective\Html\FormBuilder            
-            return \Bootstrapper\Form::file($name, $options);
+            return \Collective\Html\FormBuilder::file($name, $options);
+        }
+        
+        /**
+         * Create a textarea input field.
+         *
+         * @param string $name
+         * @param string $value
+         * @param array $options
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function textarea($name, $value = null, $options = array())
+        {
+            return \Collective\Html\FormBuilder::textarea($name, $value, $options);
+        }
+        
+        /**
+         * Create a select box field.
+         *
+         * @param string $name
+         * @param array $list
+         * @param string $selected
+         * @param array $options
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function select($name, $list = array(), $selected = null, $options = array())
+        {
+            return \Collective\Html\FormBuilder::select($name, $list, $selected, $options);
         }
         
         /**
@@ -11617,8 +11343,7 @@ namespace Bootstrapper\Facades {
          */ 
         public static function selectRange($name, $begin, $end, $selected = null, $options = array())
         {
-            //Method inherited from \Collective\Html\FormBuilder            
-            return \Bootstrapper\Form::selectRange($name, $begin, $end, $selected, $options);
+            return \Collective\Html\FormBuilder::selectRange($name, $begin, $end, $selected, $options);
         }
         
         /**
@@ -11634,8 +11359,7 @@ namespace Bootstrapper\Facades {
          */ 
         public static function selectYear()
         {
-            //Method inherited from \Collective\Html\FormBuilder            
-            return \Bootstrapper\Form::selectYear();
+            return \Collective\Html\FormBuilder::selectYear();
         }
         
         /**
@@ -11650,8 +11374,7 @@ namespace Bootstrapper\Facades {
          */ 
         public static function selectMonth($name, $selected = null, $options = array(), $format = '%B')
         {
-            //Method inherited from \Collective\Html\FormBuilder            
-            return \Bootstrapper\Form::selectMonth($name, $selected, $options, $format);
+            return \Collective\Html\FormBuilder::selectMonth($name, $selected, $options, $format);
         }
         
         /**
@@ -11665,8 +11388,7 @@ namespace Bootstrapper\Facades {
          */ 
         public static function getSelectOption($display, $value, $selected)
         {
-            //Method inherited from \Collective\Html\FormBuilder            
-            return \Bootstrapper\Form::getSelectOption($display, $value, $selected);
+            return \Collective\Html\FormBuilder::getSelectOption($display, $value, $selected);
         }
         
         /**
@@ -11681,8 +11403,7 @@ namespace Bootstrapper\Facades {
          */ 
         public static function checkbox($name, $value = 1, $checked = null, $options = array())
         {
-            //Method inherited from \Collective\Html\FormBuilder            
-            return \Bootstrapper\Form::checkbox($name, $value, $checked, $options);
+            return \Collective\Html\FormBuilder::checkbox($name, $value, $checked, $options);
         }
         
         /**
@@ -11697,8 +11418,7 @@ namespace Bootstrapper\Facades {
          */ 
         public static function radio($name, $value = null, $checked = null, $options = array())
         {
-            //Method inherited from \Collective\Html\FormBuilder            
-            return \Bootstrapper\Form::radio($name, $value, $checked, $options);
+            return \Collective\Html\FormBuilder::radio($name, $value, $checked, $options);
         }
         
         /**
@@ -11711,8 +11431,7 @@ namespace Bootstrapper\Facades {
          */ 
         public static function reset($value, $attributes = array())
         {
-            //Method inherited from \Collective\Html\FormBuilder            
-            return \Bootstrapper\Form::reset($value, $attributes);
+            return \Collective\Html\FormBuilder::reset($value, $attributes);
         }
         
         /**
@@ -11726,8 +11445,34 @@ namespace Bootstrapper\Facades {
          */ 
         public static function image($url, $name = null, $attributes = array())
         {
-            //Method inherited from \Collective\Html\FormBuilder            
-            return \Bootstrapper\Form::image($url, $name, $attributes);
+            return \Collective\Html\FormBuilder::image($url, $name, $attributes);
+        }
+        
+        /**
+         * Create a color input field.
+         *
+         * @param string $name
+         * @param string $value
+         * @param array $options
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function color($name, $value = null, $options = array())
+        {
+            return \Collective\Html\FormBuilder::color($name, $value, $options);
+        }
+        
+        /**
+         * Create a submit button element.
+         *
+         * @param string $value
+         * @param array $options
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function submit($value = null, $options = array())
+        {
+            return \Collective\Html\FormBuilder::submit($value, $options);
         }
         
         /**
@@ -11740,8 +11485,7 @@ namespace Bootstrapper\Facades {
          */ 
         public static function button($value = null, $options = array())
         {
-            //Method inherited from \Collective\Html\FormBuilder            
-            return \Bootstrapper\Form::button($value, $options);
+            return \Collective\Html\FormBuilder::button($value, $options);
         }
         
         /**
@@ -11754,8 +11498,7 @@ namespace Bootstrapper\Facades {
          */ 
         public static function getIdAttribute($name, $attributes)
         {
-            //Method inherited from \Collective\Html\FormBuilder            
-            return \Bootstrapper\Form::getIdAttribute($name, $attributes);
+            return \Collective\Html\FormBuilder::getIdAttribute($name, $attributes);
         }
         
         /**
@@ -11768,8 +11511,7 @@ namespace Bootstrapper\Facades {
          */ 
         public static function getValueAttribute($name, $value = null)
         {
-            //Method inherited from \Collective\Html\FormBuilder            
-            return \Bootstrapper\Form::getValueAttribute($name, $value);
+            return \Collective\Html\FormBuilder::getValueAttribute($name, $value);
         }
         
         /**
@@ -11781,8 +11523,7 @@ namespace Bootstrapper\Facades {
          */ 
         public static function old($name)
         {
-            //Method inherited from \Collective\Html\FormBuilder            
-            return \Bootstrapper\Form::old($name);
+            return \Collective\Html\FormBuilder::old($name);
         }
         
         /**
@@ -11793,8 +11534,7 @@ namespace Bootstrapper\Facades {
          */ 
         public static function oldInputIsEmpty()
         {
-            //Method inherited from \Collective\Html\FormBuilder            
-            return \Bootstrapper\Form::oldInputIsEmpty();
+            return \Collective\Html\FormBuilder::oldInputIsEmpty();
         }
         
         /**
@@ -11805,8 +11545,7 @@ namespace Bootstrapper\Facades {
          */ 
         public static function getSessionStore()
         {
-            //Method inherited from \Collective\Html\FormBuilder            
-            return \Bootstrapper\Form::getSessionStore();
+            return \Collective\Html\FormBuilder::getSessionStore();
         }
         
         /**
@@ -11818,8 +11557,7 @@ namespace Bootstrapper\Facades {
          */ 
         public static function setSessionStore($session)
         {
-            //Method inherited from \Collective\Html\FormBuilder            
-            return \Bootstrapper\Form::setSessionStore($session);
+            return \Collective\Html\FormBuilder::setSessionStore($session);
         }
         
         /**
@@ -11832,8 +11570,7 @@ namespace Bootstrapper\Facades {
          */ 
         public static function macro($name, $macro)
         {
-            //Method inherited from \Collective\Html\FormBuilder            
-            \Bootstrapper\Form::macro($name, $macro);
+            \Collective\Html\FormBuilder::macro($name, $macro);
         }
         
         /**
@@ -11845,8 +11582,7 @@ namespace Bootstrapper\Facades {
          */ 
         public static function hasMacro($name)
         {
-            //Method inherited from \Collective\Html\FormBuilder            
-            return \Bootstrapper\Form::hasMacro($name);
+            return \Collective\Html\FormBuilder::hasMacro($name);
         }
         
         /**
@@ -11860,8 +11596,7 @@ namespace Bootstrapper\Facades {
          */ 
         public static function macroCall($method, $parameters)
         {
-            //Method inherited from \Collective\Html\FormBuilder            
-            return \Bootstrapper\Form::macroCall($method, $parameters);
+            return \Collective\Html\FormBuilder::macroCall($method, $parameters);
         }
         
         /**
@@ -11875,8 +11610,7 @@ namespace Bootstrapper\Facades {
          */ 
         public static function component($name, $view, $signature)
         {
-            //Method inherited from \Collective\Html\FormBuilder            
-            \Bootstrapper\Form::component($name, $view, $signature);
+            \Collective\Html\FormBuilder::component($name, $view, $signature);
         }
         
         /**
@@ -11888,8 +11622,7 @@ namespace Bootstrapper\Facades {
          */ 
         public static function hasComponent($name)
         {
-            //Method inherited from \Collective\Html\FormBuilder            
-            return \Bootstrapper\Form::hasComponent($name);
+            return \Collective\Html\FormBuilder::hasComponent($name);
         }
         
         /**
@@ -11903,11 +11636,427 @@ namespace Bootstrapper\Facades {
          */ 
         public static function componentCall($method, $parameters)
         {
-            //Method inherited from \Collective\Html\FormBuilder            
-            return \Bootstrapper\Form::componentCall($method, $parameters);
+            return \Collective\Html\FormBuilder::componentCall($method, $parameters);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function error($field, $errors)
+        {
+            return \Collective\Html\FormBuilder::error($field, $errors);
         }
          
     }
+
+    class HtmlFacade {
+        
+        /**
+         * Convert an HTML string to entities.
+         *
+         * @param string $value
+         * @return string 
+         * @static 
+         */ 
+        public static function entities($value)
+        {
+            return \Collective\Html\HtmlBuilder::entities($value);
+        }
+        
+        /**
+         * Convert entities to HTML characters.
+         *
+         * @param string $value
+         * @return string 
+         * @static 
+         */ 
+        public static function decode($value)
+        {
+            return \Collective\Html\HtmlBuilder::decode($value);
+        }
+        
+        /**
+         * Generate a link to a JavaScript file.
+         *
+         * @param string $url
+         * @param array $attributes
+         * @param bool $secure
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function script($url, $attributes = array(), $secure = null)
+        {
+            return \Collective\Html\HtmlBuilder::script($url, $attributes, $secure);
+        }
+        
+        /**
+         * Generate a link to a CSS file.
+         *
+         * @param string $url
+         * @param array $attributes
+         * @param bool $secure
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function style($url, $attributes = array(), $secure = null)
+        {
+            return \Collective\Html\HtmlBuilder::style($url, $attributes, $secure);
+        }
+        
+        /**
+         * Generate an HTML image element.
+         *
+         * @param string $url
+         * @param string $alt
+         * @param array $attributes
+         * @param bool $secure
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function image($url, $alt = null, $attributes = array(), $secure = null)
+        {
+            return \Collective\Html\HtmlBuilder::image($url, $alt, $attributes, $secure);
+        }
+        
+        /**
+         * Generate a link to a Favicon file.
+         *
+         * @param string $url
+         * @param array $attributes
+         * @param bool $secure
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function favicon($url, $attributes = array(), $secure = null)
+        {
+            return \Collective\Html\HtmlBuilder::favicon($url, $attributes, $secure);
+        }
+        
+        /**
+         * Generate a HTML link.
+         *
+         * @param string $url
+         * @param string $title
+         * @param array $attributes
+         * @param bool $secure
+         * @param bool $escape
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function link($url, $title = null, $attributes = array(), $secure = null, $escape = true)
+        {
+            return \Collective\Html\HtmlBuilder::link($url, $title, $attributes, $secure, $escape);
+        }
+        
+        /**
+         * Generate a HTTPS HTML link.
+         *
+         * @param string $url
+         * @param string $title
+         * @param array $attributes
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function secureLink($url, $title = null, $attributes = array())
+        {
+            return \Collective\Html\HtmlBuilder::secureLink($url, $title, $attributes);
+        }
+        
+        /**
+         * Generate a HTML link to an asset.
+         *
+         * @param string $url
+         * @param string $title
+         * @param array $attributes
+         * @param bool $secure
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function linkAsset($url, $title = null, $attributes = array(), $secure = null)
+        {
+            return \Collective\Html\HtmlBuilder::linkAsset($url, $title, $attributes, $secure);
+        }
+        
+        /**
+         * Generate a HTTPS HTML link to an asset.
+         *
+         * @param string $url
+         * @param string $title
+         * @param array $attributes
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function linkSecureAsset($url, $title = null, $attributes = array())
+        {
+            return \Collective\Html\HtmlBuilder::linkSecureAsset($url, $title, $attributes);
+        }
+        
+        /**
+         * Generate a HTML link to a named route.
+         *
+         * @param string $name
+         * @param string $title
+         * @param array $parameters
+         * @param array $attributes
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function linkRoute($name, $title = null, $parameters = array(), $attributes = array())
+        {
+            return \Collective\Html\HtmlBuilder::linkRoute($name, $title, $parameters, $attributes);
+        }
+        
+        /**
+         * Generate a HTML link to a controller action.
+         *
+         * @param string $action
+         * @param string $title
+         * @param array $parameters
+         * @param array $attributes
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function linkAction($action, $title = null, $parameters = array(), $attributes = array())
+        {
+            return \Collective\Html\HtmlBuilder::linkAction($action, $title, $parameters, $attributes);
+        }
+        
+        /**
+         * Generate a HTML link to an email address.
+         *
+         * @param string $email
+         * @param string $title
+         * @param array $attributes
+         * @param bool $escape
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function mailto($email, $title = null, $attributes = array(), $escape = true)
+        {
+            return \Collective\Html\HtmlBuilder::mailto($email, $title, $attributes, $escape);
+        }
+        
+        /**
+         * Obfuscate an e-mail address to prevent spam-bots from sniffing it.
+         *
+         * @param string $email
+         * @return string 
+         * @static 
+         */ 
+        public static function email($email)
+        {
+            return \Collective\Html\HtmlBuilder::email($email);
+        }
+        
+        /**
+         * Generates non-breaking space entities based on number supplied.
+         *
+         * @param int $num
+         * @return string 
+         * @static 
+         */ 
+        public static function nbsp($num = 1)
+        {
+            return \Collective\Html\HtmlBuilder::nbsp($num);
+        }
+        
+        /**
+         * Generate an ordered list of items.
+         *
+         * @param array $list
+         * @param array $attributes
+         * @return \Illuminate\Support\HtmlString|string 
+         * @static 
+         */ 
+        public static function ol($list, $attributes = array())
+        {
+            return \Collective\Html\HtmlBuilder::ol($list, $attributes);
+        }
+        
+        /**
+         * Generate an un-ordered list of items.
+         *
+         * @param array $list
+         * @param array $attributes
+         * @return \Illuminate\Support\HtmlString|string 
+         * @static 
+         */ 
+        public static function ul($list, $attributes = array())
+        {
+            return \Collective\Html\HtmlBuilder::ul($list, $attributes);
+        }
+        
+        /**
+         * Generate a description list of items.
+         *
+         * @param array $list
+         * @param array $attributes
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function dl($list, $attributes = array())
+        {
+            return \Collective\Html\HtmlBuilder::dl($list, $attributes);
+        }
+        
+        /**
+         * Build an HTML attribute string from an array.
+         *
+         * @param array $attributes
+         * @return string 
+         * @static 
+         */ 
+        public static function attributes($attributes)
+        {
+            return \Collective\Html\HtmlBuilder::attributes($attributes);
+        }
+        
+        /**
+         * Obfuscate a string to prevent spam-bots from sniffing it.
+         *
+         * @param string $value
+         * @return string 
+         * @static 
+         */ 
+        public static function obfuscate($value)
+        {
+            return \Collective\Html\HtmlBuilder::obfuscate($value);
+        }
+        
+        /**
+         * Generate a meta tag.
+         *
+         * @param string $name
+         * @param string $content
+         * @param array $attributes
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function meta($name, $content, $attributes = array())
+        {
+            return \Collective\Html\HtmlBuilder::meta($name, $content, $attributes);
+        }
+        
+        /**
+         * Generate an html tag.
+         *
+         * @param string $tag
+         * @param mixed $content
+         * @param array $attributes
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function tag($tag, $content, $attributes = array())
+        {
+            return \Collective\Html\HtmlBuilder::tag($tag, $content, $attributes);
+        }
+        
+        /**
+         * Register a custom macro.
+         *
+         * @param string $name
+         * @param callable $macro
+         * @return void 
+         * @static 
+         */ 
+        public static function macro($name, $macro)
+        {
+            \Collective\Html\HtmlBuilder::macro($name, $macro);
+        }
+        
+        /**
+         * Checks if macro is registered.
+         *
+         * @param string $name
+         * @return bool 
+         * @static 
+         */ 
+        public static function hasMacro($name)
+        {
+            return \Collective\Html\HtmlBuilder::hasMacro($name);
+        }
+        
+        /**
+         * Dynamically handle calls to the class.
+         *
+         * @param string $method
+         * @param array $parameters
+         * @return mixed 
+         * @throws \BadMethodCallException
+         * @static 
+         */ 
+        public static function macroCall($method, $parameters)
+        {
+            return \Collective\Html\HtmlBuilder::macroCall($method, $parameters);
+        }
+        
+        /**
+         * Register a custom component.
+         *
+         * @param $name
+         * @param $view
+         * @param array $signature
+         * @return void 
+         * @static 
+         */ 
+        public static function component($name, $view, $signature)
+        {
+            \Collective\Html\HtmlBuilder::component($name, $view, $signature);
+        }
+        
+        /**
+         * Check if a component is registered.
+         *
+         * @param $name
+         * @return bool 
+         * @static 
+         */ 
+        public static function hasComponent($name)
+        {
+            return \Collective\Html\HtmlBuilder::hasComponent($name);
+        }
+        
+        /**
+         * Dynamically handle calls to the class.
+         *
+         * @param string $method
+         * @param array $parameters
+         * @return \Illuminate\Contracts\View\View|mixed 
+         * @throws \BadMethodCallException
+         * @static 
+         */ 
+        public static function componentCall($method, $parameters)
+        {
+            return \Collective\Html\HtmlBuilder::componentCall($method, $parameters);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function openFormGroup($field = null, $errors = null)
+        {
+            return \Collective\Html\HtmlBuilder::openFormGroup($field, $errors);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function closeFormGroup()
+        {
+            return \Collective\Html\HtmlBuilder::closeFormGroup();
+        }
+         
+    }
+ 
+}
+
+namespace Bootstrapper\Facades { 
 
     class Accordion {
         
@@ -14870,413 +15019,6 @@ namespace Bootstrapper\Facades {
  
 }
 
-namespace Collective\Html { 
-
-    class HtmlFacade {
-        
-        /**
-         * Convert an HTML string to entities.
-         *
-         * @param string $value
-         * @return string 
-         * @static 
-         */ 
-        public static function entities($value)
-        {
-            return \Collective\Html\HtmlBuilder::entities($value);
-        }
-        
-        /**
-         * Convert entities to HTML characters.
-         *
-         * @param string $value
-         * @return string 
-         * @static 
-         */ 
-        public static function decode($value)
-        {
-            return \Collective\Html\HtmlBuilder::decode($value);
-        }
-        
-        /**
-         * Generate a link to a JavaScript file.
-         *
-         * @param string $url
-         * @param array $attributes
-         * @param bool $secure
-         * @return \Illuminate\Support\HtmlString 
-         * @static 
-         */ 
-        public static function script($url, $attributes = array(), $secure = null)
-        {
-            return \Collective\Html\HtmlBuilder::script($url, $attributes, $secure);
-        }
-        
-        /**
-         * Generate a link to a CSS file.
-         *
-         * @param string $url
-         * @param array $attributes
-         * @param bool $secure
-         * @return \Illuminate\Support\HtmlString 
-         * @static 
-         */ 
-        public static function style($url, $attributes = array(), $secure = null)
-        {
-            return \Collective\Html\HtmlBuilder::style($url, $attributes, $secure);
-        }
-        
-        /**
-         * Generate an HTML image element.
-         *
-         * @param string $url
-         * @param string $alt
-         * @param array $attributes
-         * @param bool $secure
-         * @return \Illuminate\Support\HtmlString 
-         * @static 
-         */ 
-        public static function image($url, $alt = null, $attributes = array(), $secure = null)
-        {
-            return \Collective\Html\HtmlBuilder::image($url, $alt, $attributes, $secure);
-        }
-        
-        /**
-         * Generate a link to a Favicon file.
-         *
-         * @param string $url
-         * @param array $attributes
-         * @param bool $secure
-         * @return \Illuminate\Support\HtmlString 
-         * @static 
-         */ 
-        public static function favicon($url, $attributes = array(), $secure = null)
-        {
-            return \Collective\Html\HtmlBuilder::favicon($url, $attributes, $secure);
-        }
-        
-        /**
-         * Generate a HTML link.
-         *
-         * @param string $url
-         * @param string $title
-         * @param array $attributes
-         * @param bool $secure
-         * @param bool $escape
-         * @return \Illuminate\Support\HtmlString 
-         * @static 
-         */ 
-        public static function link($url, $title = null, $attributes = array(), $secure = null, $escape = true)
-        {
-            return \Collective\Html\HtmlBuilder::link($url, $title, $attributes, $secure, $escape);
-        }
-        
-        /**
-         * Generate a HTTPS HTML link.
-         *
-         * @param string $url
-         * @param string $title
-         * @param array $attributes
-         * @return \Illuminate\Support\HtmlString 
-         * @static 
-         */ 
-        public static function secureLink($url, $title = null, $attributes = array())
-        {
-            return \Collective\Html\HtmlBuilder::secureLink($url, $title, $attributes);
-        }
-        
-        /**
-         * Generate a HTML link to an asset.
-         *
-         * @param string $url
-         * @param string $title
-         * @param array $attributes
-         * @param bool $secure
-         * @return \Illuminate\Support\HtmlString 
-         * @static 
-         */ 
-        public static function linkAsset($url, $title = null, $attributes = array(), $secure = null)
-        {
-            return \Collective\Html\HtmlBuilder::linkAsset($url, $title, $attributes, $secure);
-        }
-        
-        /**
-         * Generate a HTTPS HTML link to an asset.
-         *
-         * @param string $url
-         * @param string $title
-         * @param array $attributes
-         * @return \Illuminate\Support\HtmlString 
-         * @static 
-         */ 
-        public static function linkSecureAsset($url, $title = null, $attributes = array())
-        {
-            return \Collective\Html\HtmlBuilder::linkSecureAsset($url, $title, $attributes);
-        }
-        
-        /**
-         * Generate a HTML link to a named route.
-         *
-         * @param string $name
-         * @param string $title
-         * @param array $parameters
-         * @param array $attributes
-         * @return \Illuminate\Support\HtmlString 
-         * @static 
-         */ 
-        public static function linkRoute($name, $title = null, $parameters = array(), $attributes = array())
-        {
-            return \Collective\Html\HtmlBuilder::linkRoute($name, $title, $parameters, $attributes);
-        }
-        
-        /**
-         * Generate a HTML link to a controller action.
-         *
-         * @param string $action
-         * @param string $title
-         * @param array $parameters
-         * @param array $attributes
-         * @return \Illuminate\Support\HtmlString 
-         * @static 
-         */ 
-        public static function linkAction($action, $title = null, $parameters = array(), $attributes = array())
-        {
-            return \Collective\Html\HtmlBuilder::linkAction($action, $title, $parameters, $attributes);
-        }
-        
-        /**
-         * Generate a HTML link to an email address.
-         *
-         * @param string $email
-         * @param string $title
-         * @param array $attributes
-         * @param bool $escape
-         * @return \Illuminate\Support\HtmlString 
-         * @static 
-         */ 
-        public static function mailto($email, $title = null, $attributes = array(), $escape = true)
-        {
-            return \Collective\Html\HtmlBuilder::mailto($email, $title, $attributes, $escape);
-        }
-        
-        /**
-         * Obfuscate an e-mail address to prevent spam-bots from sniffing it.
-         *
-         * @param string $email
-         * @return string 
-         * @static 
-         */ 
-        public static function email($email)
-        {
-            return \Collective\Html\HtmlBuilder::email($email);
-        }
-        
-        /**
-         * Generates non-breaking space entities based on number supplied.
-         *
-         * @param int $num
-         * @return string 
-         * @static 
-         */ 
-        public static function nbsp($num = 1)
-        {
-            return \Collective\Html\HtmlBuilder::nbsp($num);
-        }
-        
-        /**
-         * Generate an ordered list of items.
-         *
-         * @param array $list
-         * @param array $attributes
-         * @return \Illuminate\Support\HtmlString|string 
-         * @static 
-         */ 
-        public static function ol($list, $attributes = array())
-        {
-            return \Collective\Html\HtmlBuilder::ol($list, $attributes);
-        }
-        
-        /**
-         * Generate an un-ordered list of items.
-         *
-         * @param array $list
-         * @param array $attributes
-         * @return \Illuminate\Support\HtmlString|string 
-         * @static 
-         */ 
-        public static function ul($list, $attributes = array())
-        {
-            return \Collective\Html\HtmlBuilder::ul($list, $attributes);
-        }
-        
-        /**
-         * Generate a description list of items.
-         *
-         * @param array $list
-         * @param array $attributes
-         * @return \Illuminate\Support\HtmlString 
-         * @static 
-         */ 
-        public static function dl($list, $attributes = array())
-        {
-            return \Collective\Html\HtmlBuilder::dl($list, $attributes);
-        }
-        
-        /**
-         * Build an HTML attribute string from an array.
-         *
-         * @param array $attributes
-         * @return string 
-         * @static 
-         */ 
-        public static function attributes($attributes)
-        {
-            return \Collective\Html\HtmlBuilder::attributes($attributes);
-        }
-        
-        /**
-         * Obfuscate a string to prevent spam-bots from sniffing it.
-         *
-         * @param string $value
-         * @return string 
-         * @static 
-         */ 
-        public static function obfuscate($value)
-        {
-            return \Collective\Html\HtmlBuilder::obfuscate($value);
-        }
-        
-        /**
-         * Generate a meta tag.
-         *
-         * @param string $name
-         * @param string $content
-         * @param array $attributes
-         * @return \Illuminate\Support\HtmlString 
-         * @static 
-         */ 
-        public static function meta($name, $content, $attributes = array())
-        {
-            return \Collective\Html\HtmlBuilder::meta($name, $content, $attributes);
-        }
-        
-        /**
-         * Generate an html tag.
-         *
-         * @param string $tag
-         * @param mixed $content
-         * @param array $attributes
-         * @return \Illuminate\Support\HtmlString 
-         * @static 
-         */ 
-        public static function tag($tag, $content, $attributes = array())
-        {
-            return \Collective\Html\HtmlBuilder::tag($tag, $content, $attributes);
-        }
-        
-        /**
-         * Register a custom macro.
-         *
-         * @param string $name
-         * @param callable $macro
-         * @return void 
-         * @static 
-         */ 
-        public static function macro($name, $macro)
-        {
-            \Collective\Html\HtmlBuilder::macro($name, $macro);
-        }
-        
-        /**
-         * Checks if macro is registered.
-         *
-         * @param string $name
-         * @return bool 
-         * @static 
-         */ 
-        public static function hasMacro($name)
-        {
-            return \Collective\Html\HtmlBuilder::hasMacro($name);
-        }
-        
-        /**
-         * Dynamically handle calls to the class.
-         *
-         * @param string $method
-         * @param array $parameters
-         * @return mixed 
-         * @throws \BadMethodCallException
-         * @static 
-         */ 
-        public static function macroCall($method, $parameters)
-        {
-            return \Collective\Html\HtmlBuilder::macroCall($method, $parameters);
-        }
-        
-        /**
-         * Register a custom component.
-         *
-         * @param $name
-         * @param $view
-         * @param array $signature
-         * @return void 
-         * @static 
-         */ 
-        public static function component($name, $view, $signature)
-        {
-            \Collective\Html\HtmlBuilder::component($name, $view, $signature);
-        }
-        
-        /**
-         * Check if a component is registered.
-         *
-         * @param $name
-         * @return bool 
-         * @static 
-         */ 
-        public static function hasComponent($name)
-        {
-            return \Collective\Html\HtmlBuilder::hasComponent($name);
-        }
-        
-        /**
-         * Dynamically handle calls to the class.
-         *
-         * @param string $method
-         * @param array $parameters
-         * @return \Illuminate\Contracts\View\View|mixed 
-         * @throws \BadMethodCallException
-         * @static 
-         */ 
-        public static function componentCall($method, $parameters)
-        {
-            return \Collective\Html\HtmlBuilder::componentCall($method, $parameters);
-        }
-        
-        /**
-         * 
-         *
-         * @static 
-         */ 
-        public static function openFormGroup($field = null, $errors = null)
-        {
-            return \Collective\Html\HtmlBuilder::openFormGroup($field, $errors);
-        }
-        
-        /**
-         * 
-         *
-         * @static 
-         */ 
-        public static function closeFormGroup()
-        {
-            return \Collective\Html\HtmlBuilder::closeFormGroup();
-        }
-         
-    }
- 
-}
-
 
 namespace  { 
 
@@ -17177,7 +16919,7 @@ namespace  {
 
     class View extends \Illuminate\Support\Facades\View {}
 
-    class Form extends \Bootstrapper\Facades\Form {}
+    class Form extends \Collective\Html\FormFacade {}
 
     class Html extends \Collective\Html\HtmlFacade {}
 
