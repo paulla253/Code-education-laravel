@@ -25,7 +25,7 @@
                           Form::close();
                     $anchorDestroy = Button::link('Deletar' )
                                     ->asLinkTo($linkDestroy)->addAttributes([
-                                    'onlick'=>"event.preventDefault();document.getElementById(\"{$deleteForm}\").submit();"
+                                    'onclick'=>"event.preventDefault();document.getElementById(\"{$deleteForm}\").submit();"
                                     ]);
                     return "<ul class=\"list-inline\">".
                         "<li>".Button::link("Editar" )->asLinkTo($linkEdit)."</li>".
