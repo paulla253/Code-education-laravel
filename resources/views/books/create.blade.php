@@ -7,17 +7,17 @@
 
             <h3>Novo Livro</h3>
 
-            {{--@include('errors._erros_form')--}}
+
 
             {!! Form::open(['route'=>'books.store','class' =>'form']) !!}
 
             @include('books._form')
 
-            <div class="form-group">
+            {!!Html::openFormGroup() !!}
 
-                {!! Form::submit('Criar Livro',['class' =>'btn btn-primary']) !!}
+                {!! Button::primary('Criar livro')->submit() !!}
 
-            </div>
+             {!!Html::closeFormGroup() !!}
 
             {!! Form::close() !!}
 

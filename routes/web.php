@@ -19,6 +19,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
+#pode acessar apenas quando estiver logado.
 Route::group(['middleware'=>'auth'],function(){
     //não irá criar a rota show.
     Route::resource('categories','CategoriesController',['except' => 'show']);
