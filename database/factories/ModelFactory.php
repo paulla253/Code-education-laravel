@@ -45,7 +45,7 @@ $factory->define(App\Book::class, function (Faker\Generator $faker) {
 
     return [
         //ucfirst ==Mudar a primeira letra para maisculo.
-        'author_id'=>2,
+        'author_id'=>random_int(1,10),
         'title' => ucfirst($faker->unique()->word),
         'subtitle'=> ucfirst($faker->name),
         'price'=>$faker->randomFloat(2,10,200),
