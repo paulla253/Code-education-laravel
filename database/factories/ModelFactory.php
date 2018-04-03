@@ -23,7 +23,6 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
     ];
 });
 
-
 $factory->define(App\Category::class, function (Faker\Generator $faker) {
     static $password;
 
@@ -38,7 +37,6 @@ $factory->define(App\Author::class, function (Faker\Generator $faker) {
         'name' => ucfirst($faker->unique()->word),
     ];
 });
-
 
 $factory->define(App\Book::class, function (Faker\Generator $faker) {
     static $password;

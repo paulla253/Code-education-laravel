@@ -22,14 +22,26 @@
 </head>
 <body>
         <?php $navbar = Navbar::withBrand(config('app.name'),url('/'))->inverse();
-
+                #se o usuário está logado.
                if(Auth::check())
                {
+                   #Menu
                    $links=Navigation::Links([
                     [
                         'link' => route('categories.index'),
-                        'title'=>'Categoria'
-                    ]
+                        'title'=>'Categoria',
+                    ],
+
+                    [
+                        'link' => route('books.index'),
+                        'title'=>'Livros'
+                    ],
+
+                    [
+                    'link' => route('authors.index'),
+                       'title'=>'Autores'
+                    ],
+
                    ]);
 
                    $logout = Navigation::links([
