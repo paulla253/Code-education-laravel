@@ -25,6 +25,8 @@
 
                 <tbody>
 
+                @php $userID = Auth::user()->id; @endphp
+
                 @foreach ($books as $book)
                     <tr>
                         <td> {{$book->id}}</td>
@@ -32,6 +34,8 @@
                         <td> {{$book->subtitle}}</td>
                         <td> {{$book->price}}</td>
                         <td>
+
+                            @php if($userID == $book->user_id){ @endphp
                             <ul>
                                 <li>
                                         <a href="{{route ('books.edit',['book'=>$book->id])}}">Editar</a>
@@ -50,6 +54,8 @@
                                 </li>
 
                             </ul>
+                            @php } @endphp
+
                         </td>
                     </tr>
 

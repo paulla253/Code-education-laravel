@@ -31,7 +31,7 @@ class BookRequest extends FormRequest
             'title' => "required | max:255 | unique:books,title,$id",
             'subtitle' => "required | max:255 ",
             'price' =>"required | numeric",
-            'author_id'=>"required | numeric | exists:authors,id",
+            'user_id'=>"required | numeric | exists:users,id",
         ];
     }
 }

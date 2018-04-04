@@ -17,11 +17,6 @@
     {!! Form::text('price',null,['class'=>'form-control']) !!}
     {!! Form::error('price',$errors) !!}
 
-{!!Html::openFormGroup('author_id',$errors) !!}
-    {!! Form::label('author_id','Codigo Autor',['class'=>'control-label']) !!}
-    {!! Form::text('author_id',null,['class'=>'form-control']) !!}
-    {!! Form::error('author_id',$errors) !!}
-
 {!!Html::closeFormGroup() !!}
 
 

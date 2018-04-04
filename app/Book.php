@@ -10,9 +10,8 @@ class Book extends Model
         'author_id','title', 'subtitle','price',
     ];
 
-    public function authors()
-    {
-        return $this->hasOne('App\Author');
+    public function author(){
+        return $this->belongsTo(User::class);
     }
 
 
