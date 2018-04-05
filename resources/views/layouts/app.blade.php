@@ -35,12 +35,7 @@
                     [
                         'link' => route('books.index'),
                         'title'=>'Livros'
-                    ],
-
-                    [
-                    'link' => route('authors.index'),
-                       'title'=>'Autores'
-                    ],
+                    ]
 
                    ]);
 
