@@ -42,7 +42,6 @@ class BooksController extends Controller
      */
     public function store(BookRequest $request)
     {
-//        return "Teste";
         Book::create($request->all());
         return redirect()->route('books.index');
     }
