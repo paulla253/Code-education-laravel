@@ -18,9 +18,6 @@ class BooksController extends Controller
 
         $books = Book::query()->paginate(10);
 
-//            return ("teste");
-
-
         return view('.books.index',compact('books'));
     }
 
@@ -42,8 +39,14 @@ class BooksController extends Controller
      */
     public function store(BookRequest $request)
     {
+//        dd($request);
+
         Book::create($request->all());
-        return redirect()->route('books.index');
+
+        $url=$request->get('redirect_to',route('books.index'));
+        $request->session()->flash('message','Livro cadastrado com sucesso.');
+
+        return redirect()->to($url);
     }
 
     /**
@@ -80,7 +83,10 @@ class BooksController extends Controller
         $book->fill($request ->all());
         $book->save();
 
-        return redirect()->route('books.index');
+        $url=$request->get('redirect_to',route('books.index'));
+        $request->session()->flash('message','Livro editado com sucesso.');
+
+        return redirect()->to($url);
     }
 
     /**
@@ -92,6 +98,9 @@ class BooksController extends Controller
     public function destroy(Book $book)
     {
         $book->delete();
-        return redirect()->route('books.index');
+
+        \Session::flash('message','Livro excluido com sucesso.');
+
+        return redirect()->to(\URL::previous());
     }
 }

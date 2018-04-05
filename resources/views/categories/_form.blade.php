@@ -1,5 +1,5 @@
+<!--Pegar a url que estou(configurado no template para mostrar) -->
 {!! Form::hidden('redirect_to',URL::previous()) !!}
-
 
 <!--Para criar essa estrutura(FormGroup) foi criado funções Providers>AppServiceProvider -->
 {!!Html::openFormGroup('name',$errors) !!}

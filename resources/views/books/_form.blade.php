@@ -1,3 +1,4 @@
+{!! Form::hidden('redirect_to',URL::previous()) !!}
 
 @php$userID = Auth::user()->id; @endphp
 {!! Form::hidden('user_id',$userID) !!}

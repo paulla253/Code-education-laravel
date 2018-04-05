@@ -52,7 +52,6 @@ class CategoriesController extends Controller
 
         #continuar na url que estava antes(precisa de um campo no formulario).
         $url=$request->get('redirect_to',route('categories.index'));
-
         $request->session()->flash('message','Categoria cadastrada com sucesso.');
 
         return redirect()->to($url);
