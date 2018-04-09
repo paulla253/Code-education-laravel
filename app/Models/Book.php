@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Models;
+namespace CodePub\Models;
 
-use App\Models\User;
+use CodePub\Models\User;
 use Bootstrapper\Interfaces\TableInterface;
 use Illuminate\Database\Eloquent\Model;
 

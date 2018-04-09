@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace CodePub\Http\Controllers;
 
-use App\Http\Requests\CategoryRequest;
-use App\Repositories\CategoryRepository;
+use CodePub\Http\Requests\CategoryRequest;
+use CodePub\Repositories\CategoryRepository;
 
 class CategoriesController extends Controller
 {
