@@ -10,7 +10,7 @@
 
 namespace App{
 /**
- * App\User
+ * CodePub\User
  *
  * @property int $id
  * @property string $name

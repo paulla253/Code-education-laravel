@@ -1243,7 +1243,7 @@ namespace Illuminate\Support\Facades {
         public static function handle($input, $output = null)
         {
             //Method inherited from \Illuminate\Foundation\Console\Kernel            
-            return \App\Console\Kernel::handle($input, $output);
+            return \CodePub\Console\Kernel::handle($input, $output);
         }
         
         /**
@@ -1257,7 +1257,7 @@ namespace Illuminate\Support\Facades {
         public static function terminate($input, $status)
         {
             //Method inherited from \Illuminate\Foundation\Console\Kernel            
-            \App\Console\Kernel::terminate($input, $status);
+            \CodePub\Console\Kernel::terminate($input, $status);
         }
         
         /**
@@ -1271,7 +1271,7 @@ namespace Illuminate\Support\Facades {
         public static function command($signature, $callback)
         {
             //Method inherited from \Illuminate\Foundation\Console\Kernel            
-            return \App\Console\Kernel::command($signature, $callback);
+            return \CodePub\Console\Kernel::command($signature, $callback);
         }
         
         /**
@@ -1284,7 +1284,7 @@ namespace Illuminate\Support\Facades {
         public static function registerCommand($command)
         {
             //Method inherited from \Illuminate\Foundation\Console\Kernel            
-            \App\Console\Kernel::registerCommand($command);
+            \CodePub\Console\Kernel::registerCommand($command);
         }
         
         /**
@@ -1298,7 +1298,7 @@ namespace Illuminate\Support\Facades {
         public static function call($command, $parameters = array())
         {
             //Method inherited from \Illuminate\Foundation\Console\Kernel            
-            return \App\Console\Kernel::call($command, $parameters);
+            return \CodePub\Console\Kernel::call($command, $parameters);
         }
         
         /**
@@ -1312,7 +1312,7 @@ namespace Illuminate\Support\Facades {
         public static function queue($command, $parameters = array())
         {
             //Method inherited from \Illuminate\Foundation\Console\Kernel            
-            \App\Console\Kernel::queue($command, $parameters);
+            \CodePub\Console\Kernel::queue($command, $parameters);
         }
         
         /**
@@ -1324,7 +1324,7 @@ namespace Illuminate\Support\Facades {
         public static function all()
         {
             //Method inherited from \Illuminate\Foundation\Console\Kernel            
-            return \App\Console\Kernel::all();
+            return \CodePub\Console\Kernel::all();
         }
         
         /**
@@ -1336,7 +1336,7 @@ namespace Illuminate\Support\Facades {
         public static function output()
         {
             //Method inherited from \Illuminate\Foundation\Console\Kernel            
-            return \App\Console\Kernel::output();
+            return \CodePub\Console\Kernel::output();
         }
         
         /**
@@ -1348,7 +1348,7 @@ namespace Illuminate\Support\Facades {
         public static function bootstrap()
         {
             //Method inherited from \Illuminate\Foundation\Console\Kernel            
-            \App\Console\Kernel::bootstrap();
+            \CodePub\Console\Kernel::bootstrap();
         }
         
         /**
@@ -1361,7 +1361,7 @@ namespace Illuminate\Support\Facades {
         public static function setArtisan($artisan)
         {
             //Method inherited from \Illuminate\Foundation\Console\Kernel            
-            \App\Console\Kernel::setArtisan($artisan);
+            \CodePub\Console\Kernel::setArtisan($artisan);
         }
          
     }
@@ -1519,7 +1519,7 @@ namespace Illuminate\Support\Facades {
         /**
          * Get the currently authenticated user.
          *
-         * @return \App\Models\User|null
+         * @return \CodePub\Models\User|null
          * @static 
          */ 
         public static function user()
@@ -1632,7 +1632,7 @@ namespace Illuminate\Support\Facades {
          *
          * @param mixed $id
          * @param bool $remember
-         * @return \App\Models\User|false
+         * @return \CodePub\Models\User|false
          * @static 
          */ 
         public static function loginUsingId($id, $remember = false)
@@ -1644,7 +1644,7 @@ namespace Illuminate\Support\Facades {
          * Log the given user ID into the application without sessions or cookies.
          *
          * @param mixed $id
-         * @return \App\Models\User|false
+         * @return \CodePub\Models\User|false
          * @static 
          */ 
         public static function onceUsingId($id)
@@ -1747,7 +1747,7 @@ namespace Illuminate\Support\Facades {
         /**
          * Return the currently cached user.
          *
-         * @return \App\Models\User|null
+         * @return \CodePub\Models\User|null
          * @static 
          */ 
         public static function getUser()
@@ -1793,7 +1793,7 @@ namespace Illuminate\Support\Facades {
         /**
          * Get the last user we attempted to authenticate.
          *
-         * @return \App\Models\User
+         * @return \CodePub\Models\User
          * @static 
          */ 
         public static function getLastAttempted()
@@ -1837,7 +1837,7 @@ namespace Illuminate\Support\Facades {
         /**
          * Determine if the current user is authenticated.
          *
-         * @return \App\Models\User
+         * @return \CodePub\Models\User
          * @throws \Illuminate\Auth\AuthenticationException
          * @static 
          */ 
