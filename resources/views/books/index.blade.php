@@ -18,10 +18,6 @@
             {!!
                 Table::withContents($books->items())->striped()
                  ->callback('Ações',function($field,$book){
-
-                     $userID = Auth::user()->id;
-                     if($userID == $book->user_id){
-
                     $linkEdit = route ('books.edit',['book'=>$book->id]);
                     $linkDestroy=route ('books.destroy',['book'=>$book->id]);
                     $deleteForm="delete-form-{$book->id}";
@@ -39,8 +35,6 @@
                         "<li>".$anchorDestroy."</li>".
                     "</ul>".
                     $form;
-
-                    } else return "";
                     })
                 !!}
             {{$books->links()}}

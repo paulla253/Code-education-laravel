@@ -2,8 +2,8 @@
 
 namespace CodePub\Http\Controllers;
 
-use CodePub\Models\Book;
-use CodePub\Http\Requests\BookRequest;
+use CodePub\Http\Requests\BookCreateRequest;
+use CodePub\Http\Requests\BookUpdateRequest;
 use CodePub\Repositories\BookRepository;
 
 class BooksController extends Controller
@@ -41,7 +41,7 @@ class BooksController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(BookRequest $request)
+    public function store(BookCreateRequest $request)
     {
         $this->repository->create($request->all());
 
@@ -70,7 +70,7 @@ class BooksController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(BookRequest $request,$id)
+    public function update(BookUpdateRequest $request, $id)
     {
         $this->repository->update($request->all(),$id);
 
