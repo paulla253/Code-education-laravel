@@ -7,6 +7,7 @@ use App\Repositories\CategoryRepository;
 
 class CategoriesController extends Controller
 {
+    #construtor para pegar o repository
     public function __construct(CategoryRepository $repository)
     {
         $this->repository= $repository;

@@ -24,8 +24,7 @@ class BookRequest extends FormRequest
     public function rules()
     {
         //Regra unique : passa o nome da tabela,campo e o $id para ser ignorado.
-        $book = $this->route('book');
-        $id = $book ? $book->id : NULL;
+        $id = $this->route('book');
 
         return [
             'title' => "required | max:255 | unique:books,title,$id",
