@@ -12,6 +12,7 @@ class Book extends Model  implements  TableInterface
         'author_id','title', 'subtitle','price',
     ];
 
+    #muitos para um
     public function author(){
         return $this->belongsTo(User::class);
     }

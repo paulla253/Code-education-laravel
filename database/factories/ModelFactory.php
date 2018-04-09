@@ -34,14 +34,17 @@ $factory->define(\CodePub\Models\Category::class, function (Faker\Generator $fak
 
 
 $factory->define(\CodePub\Models\Book::class, function (Faker\Generator $faker) {
-    static $password;
+
+    #pegar o serviço.
+    $repository=app(\CodePub\Repositories\UserRepository::class);
+    $author_id=$repository->all()->random()->id;
 
     return [
         //ucfirst ==Mudar a primeira letra para maisculo.
-        'user_id'=>random_int(1,10),
         'title' => ucfirst($faker->unique()->word),
         'subtitle'=> ucfirst($faker->name),
         'price'=>$faker->randomFloat(2,10,200),
+        'author_id'=>$author_id,
     ];
 });
 
