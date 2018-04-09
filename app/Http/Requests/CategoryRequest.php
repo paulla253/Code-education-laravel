@@ -25,8 +25,8 @@ class CategoryRequest extends FormRequest
     {
         //Regra unique : passa o nome da tabela,campo e o $id para ser ignorado.
 
-        $category = $this->route('category');
-        $id = $category ? $category->id : NULL;
+        $id = $this->route('category');
+//        $id = $category ? $category->id : NULL;
         return [
             'name' => "required | max:255|unique:categories,name,$id"
         ];
