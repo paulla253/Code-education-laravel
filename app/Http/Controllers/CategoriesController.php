@@ -4,6 +4,7 @@ namespace CodePub\Http\Controllers;
 
 use CodePub\Http\Requests\CategoryRequest;
 use CodePub\Repositories\CategoryRepository;
+use Illuminate\Http\Request;
 
 class CategoriesController extends Controller
 {
@@ -19,15 +20,18 @@ class CategoriesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+        $search=$request->get('search');
+
+
         //em vez de chamar o metodo :: all chamar o paginate para colocar páginação.
         // tem que configrar na view :  {{$categories->links()}}
 
         #utilizando o repository para paginação
         $categories = $this->repository->paginate(10);
 
-        return view('.categories.index',compact('categories'));
+        return view('.categories.index',compact('categories','search'));
     }
 
     /**

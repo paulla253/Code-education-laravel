@@ -2,8 +2,6 @@
 
 namespace CodePub\Http\Controllers;
 
-use CodePub\Criteria\FindByAuthorCriteria;
-use CodePub\Criteria\FindyByTitleCriteria;
 use CodePub\Http\Requests\BookCreateRequest;
 use CodePub\Http\Requests\BookUpdateRequest;
 use CodePub\Repositories\BookRepository;

@@ -11,6 +11,15 @@
         </div>
 
         <div class="row">
+            <!--Realizar a pesquisa -->
+            {!! Form::model ([compact('search')],[ 'class'=>'form-inline pull-right','method'=>'GET']) !!}
+            {!! Form::label('search','Pesquisar categoria',['class'=>'control-label']) !!}
+            {!! Form::text('search',null,['class'=>'form-control']) !!}
+            {!! Button::primary('Buscar')->submit() !!}
+            {!! Form::close() !!}
+        </div>
+
+        <div class="row">
             {{--Em model configurar qual campo deverá ser mostrado--}}
             {!!
                 Table::withContents($categories->items())->striped()

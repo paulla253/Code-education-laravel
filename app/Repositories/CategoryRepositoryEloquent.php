@@ -13,6 +13,13 @@ use CodePub\Models\Category;
  */
 class CategoryRepositoryEloquent extends BaseRepository implements CategoryRepository
 {
+    #definir parametros para buscar.
+    protected $fieldSearchable = [
+        'name' => 'like'
+    ];
+
+
+
     /**
      * Specify Model class name
      *
