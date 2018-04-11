@@ -9,9 +9,13 @@ class Category extends Model implements  TableInterface
 {
     protected $fillable = [
        'name'
-
     ];
 
+    #relacionamento de categoria e livro
+    public function books()
+    {
+        return $this->belongsToMany(Book::class);
+    }
 
     public function getTableHeaders()
     {
@@ -35,4 +39,7 @@ class Category extends Model implements  TableInterface
                 return $this->name;
         }
     }
+
+
+
 }

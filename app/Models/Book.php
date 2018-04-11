@@ -17,6 +17,11 @@ class Book extends Model  implements  TableInterface
         return $this->belongsTo(User::class);
     }
 
+    #relacionamento de categoria e livro
+    public function categories()
+    {
+        return $this->belongsToMany(Category::class);
+    }
 
     public function getTableHeaders()
     {
@@ -43,6 +48,5 @@ class Book extends Model  implements  TableInterface
                 return $this->author->name;
         }
     }
-
 
 }
