@@ -15,6 +15,11 @@ use CodePub\Validators\BookValidator;
  */
 class BookRepositoryEloquent extends BaseRepository implements BookRepository
 {
+    #definir parametros para buscar.
+    protected $fieldSearchable = [
+        'title'
+    ];
+
     /**
      * Specify Model class name
      *

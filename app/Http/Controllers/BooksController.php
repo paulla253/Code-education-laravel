@@ -7,6 +7,7 @@ use CodePub\Criteria\FindyByTitleCriteria;
 use CodePub\Http\Requests\BookCreateRequest;
 use CodePub\Http\Requests\BookUpdateRequest;
 use CodePub\Repositories\BookRepository;
+use Illuminate\Http\Request;
 
 class BooksController extends Controller
 {
@@ -21,11 +22,12 @@ class BooksController extends Controller
         $this->repository= $repository;
     }
 
-    public function index()
+    public function index(Request $request)
     {
-        #trabalhar com criterios ou seja busca
-//       $this->repository->pushCriteria(new FindyByTitleCriteria('Quam'))
-//       ->pushCriteria(new FindByAuthorCriteria());
+//        $seach=$request->get('search');
+//
+//        #trabalhar com criterios ou seja busca
+//       $this->repository->pushCriteria(new FindyByTitleCriteria($seach));
 
         $books =  $this->repository->paginate(10);
         return view('.books.index',compact('books'));
