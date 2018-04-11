@@ -24,13 +24,10 @@ class BooksController extends Controller
 
     public function index(Request $request)
     {
-//        $seach=$request->get('search');
-//
-//        #trabalhar com criterios ou seja busca
-//       $this->repository->pushCriteria(new FindyByTitleCriteria($seach));
+        $search=$request->get('search');
 
         $books =  $this->repository->paginate(10);
-        return view('.books.index',compact('books'));
+        return view('.books.index',compact('books','search'));
     }
 
     /**

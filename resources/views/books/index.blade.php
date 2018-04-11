@@ -11,7 +11,20 @@
             {!! Button::primary('Novo livro')->asLinkTo(route('books.create')) !!}
         </div>
 
-        @php $userID = Auth::user()->id; @endphp
+        <br>
+
+        <div class="row">
+
+            <!--Realizar a pesquisa -->
+            {!! Form::model ([compact('search')],[ 'class'=>'form-inline pull-right','method'=>'GET']) !!}
+                {!! Form::label('search','Pesquisar por título ou autor',['class'=>'control-label']) !!}
+                {!! Form::text('search',null,['class'=>'form-control']) !!}
+
+
+                {!! Button::primary('Buscar')->submit() !!}
+            {!! Form::close() !!}
+
+        </div>
 
         <div class="row">
 
