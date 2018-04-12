@@ -18,9 +18,9 @@
     {!! Form::error('price',$errors) !!}
 
 {!!Html::openFormGroup('price',$errors) !!}
-{!! Form::label('price','Preço',['class'=>'control-label']) !!}
+{!! Form::label('price','Categorias',['class'=>'control-label']) !!}
 {!! Form::select('categories[]',$categories,null,['class'=>'form-control','multiple'=>'true']) !!}
-{!! Form::error('price',$errors) !!}
+{!! Form::error('categories.*',$errors) !!}
 
 {!!Html::closeFormGroup() !!}
 
