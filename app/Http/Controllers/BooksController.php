@@ -4,20 +4,29 @@ namespace CodePub\Http\Controllers;
 
 use CodePub\Http\Requests\BookCreateRequest;
 use CodePub\Http\Requests\BookUpdateRequest;
+use CodePub\Repositories\BaseRepository;
+use CodePub\Repositories\BaseRepositoryTrait;
 use CodePub\Repositories\BookRepository;
+use CodePub\Repositories\CategoryRepository;
 use Illuminate\Http\Request;
 
 class BooksController extends Controller
 {
+    /**
+     * @var CategoryRepository
+     */
+    private $categoryRequest;
+
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
 
-    public function __construct(BookRepository $repository)
+    public function __construct(BookRepository $repository,CategoryRepository $categoryRequest)
     {
         $this->repository= $repository;
+        $this->categoryRequest = $categoryRequest;
     }
 
     public function index(Request $request)
@@ -35,7 +44,9 @@ class BooksController extends Controller
      */
     public function create()
     {
-        return view('books.create');
+        #lists funcao modificada no BaseRepositoryTrait.
+        $categories=$this->categoryRequest->lists('name','id');
+        return view('books.create',compact('categories'));
     }
 
     /**

@@ -1,8 +1,5 @@
 {!! Form::hidden('redirect_to',URL::previous()) !!}
 
-@php$userID = Auth::user()->id; @endphp
-{!! Form::hidden('user_id',$userID) !!}
-
 {!!Html::openFormGroup('title',$errors) !!}
     {!! Form::label('title','Titulo',['class'=>'control-label']) !!}
     {!! Form::text('title',null,['class'=>'form-control']) !!}
@@ -19,6 +16,12 @@
     {!! Form::label('price','Preço',['class'=>'control-label']) !!}
     {!! Form::text('price',null,['class'=>'form-control']) !!}
     {!! Form::error('price',$errors) !!}
+
+{!!Html::openFormGroup('price',$errors) !!}
+{!! Form::label('price','Preço',['class'=>'control-label']) !!}
+{!! Form::select('categories[]',$categories,null,['class'=>'form-control','multiple'=>'true']) !!}
+{!! Form::error('price',$errors) !!}
+
 {!!Html::closeFormGroup() !!}
 
 
