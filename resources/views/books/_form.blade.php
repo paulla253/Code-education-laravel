@@ -16,12 +16,13 @@
     {!! Form::label('price','Preço',['class'=>'control-label']) !!}
     {!! Form::text('price',null,['class'=>'form-control']) !!}
     {!! Form::error('price',$errors) !!}
+{!!Html::closeFormGroup() !!}
 
-{!!Html::openFormGroup('price',$errors) !!}
-{!! Form::label('price','Categorias',['class'=>'control-label']) !!}
-{!! Form::select('categories[]',$categories,null,['class'=>'form-control','multiple'=>'true']) !!}
-{!! Form::error('categories.*',$errors) !!}
-
+    {!!Html::openFormGroup('price',$errors) !!}
+    {!! Form::label('price','Categorias',['class'=>'control-label']) !!}
+    {!! Form::select('categories[]',$categories,null,['class'=>'form-control','multiple'=>'true']) !!}
+    {!! Form::error('categories',$errors) !!}
+    {!! Form::error('categories.*',$errors) !!}
 {!!Html::closeFormGroup() !!}
 
 
