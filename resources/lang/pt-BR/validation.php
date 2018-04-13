@@ -149,5 +149,6 @@ return [
         'categories'=>'categorias',
         'price'=>'valor',
         'subtitle'=>'subtítulo',
+        'categories_*'=>'categoria :num'
     ],
 ];

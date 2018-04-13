@@ -26,7 +26,25 @@ class AppServiceProvider extends ServiceProvider
         //Criado tratamento de erros para FormGroup
         \Html::macro('openFormGroup',function($field = null,$errors =null)
         {
-            $hasError= ($field != null and $errors != null and $errors->has($field)) ?' has-error': ' ';
+            #logica para aceitar multcampos ( exemplo de select de categorias)
+            $result=false;
+            if($field!=null and $errors !=null){
+                if(is_array($field)){
+                    foreach ($field as $value){
+                        if(!str_contains($value,'*') && $errors->has($value) || count($errors->get($value)) >0){
+                            $result=true;
+                            break;
+                        }
+                    }
+                }
+                else {
+                    if(!str_contains($field,'*') && $errors->has($field) || count($errors->get($field)) > 0) {
+                        $result=true;
+                    }
+                }
+            }
+
+            $hasError=$result ?' has-error': ' ';
             return "<div class=\"form-group{$hasError}\">";
         });
 
