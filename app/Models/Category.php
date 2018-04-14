@@ -4,9 +4,16 @@ namespace CodePub\Models;
 
 use Bootstrapper\Interfaces\TableInterface;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Category extends Model implements  TableInterface
 {
+    #para trabalhar com delete logico.
+    use SoftDeletes;
+
+    protected $dates = ['deleted_at'];
+    #--------------------------------
+
     protected $fillable = [
        'name'
     ];
@@ -39,7 +46,4 @@ class Category extends Model implements  TableInterface
                 return $this->name;
         }
     }
-
-
-
 }

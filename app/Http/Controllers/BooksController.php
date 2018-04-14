@@ -20,7 +20,8 @@ class BooksController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @param BookRepository $repository
+     * @param CategoryRepository $categoryRequest
      */
 
     public function __construct(BookRepository $repository,CategoryRepository $categoryRequest)
@@ -52,7 +53,6 @@ class BooksController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function store(BookCreateRequest $request)
