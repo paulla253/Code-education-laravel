@@ -18,6 +18,8 @@
     {!! Form::error('price',$errors) !!}
 {!!Html::closeFormGroup() !!}
 
+{{--@php    dd($categories) @endphp--}}
+
     {!!Html::openFormGroup(['categories','categories.*'],$errors) !!}
     {!! Form::label('categories[]','Categorias',['class'=>'control-label']) !!}
     {!! Form::select('categories[]',$categories,null,['class'=>'form-control','multiple'=>'true']) !!}
