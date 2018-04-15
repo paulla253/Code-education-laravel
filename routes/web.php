@@ -23,17 +23,11 @@ Route::get('/home', 'HomeController@index');
 Route::group(['middleware'=>'auth'],function(){
     //não irá criar a rota show.
     Route::resource('categories','CategoriesController',['except' => 'show']);
-
-});
-
-Route::group(['middleware'=>'auth'],function(){
-    //não irá criar a rota show.
     Route::resource('books','BooksController',['except' => 'show']);
-
+    #agregar nomes as rotas filhas de trashed.
+    Route::group(['prefix'=>'trashed','as'=>'trashed.'],function(){
+        Route::resource('books','BooksTrashedController',['except' =>
+            ['show','create','store','edit','update','destroy']]);
+    });
 });
 
-Route::group(['middleware'=>'auth'],function(){
-    //não irá criar a rota show.
-    Route::resource('authors','AuthorsController',['except' => 'show']);
-
-});

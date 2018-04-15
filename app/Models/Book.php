@@ -5,10 +5,17 @@ namespace CodePub\Models;
 use Bootstrapper\Interfaces\TableInterface;
 use Collective\Html\Eloquent\FormAccessible;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Book extends Model  implements  TableInterface
 {
     use FormAccessible;
+
+    #para trabalhar com delete logico.
+    use SoftDeletes;
+
+    protected $dates = ['deleted_at'];
+    #--------------------------------
 
     protected $fillable = [
         'author_id','title', 'subtitle','price',

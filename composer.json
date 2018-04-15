@@ -28,6 +28,7 @@
         "psr-4": {
             "CodePub\\": "app/"
         }
+        }
     },
     "autoload-dev": {
         "classmap": [

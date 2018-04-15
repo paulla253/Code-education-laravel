@@ -33,10 +33,18 @@
                     ],
 
                     [
-                        'link' => route('books.index'),
-                        'title'=>'Livros'
+                       'Livro',
+                        [
+                            [
+                                'link' => route('books.index'),
+                                'title'=>'Listar'
+                            ],
+                            [
+                                'link' => route('trashed.books.index'),
+                                'title'=>'Lixeira'
+                             ]
+                        ]
                     ]
-
                    ]);
 
                    $logout = Navigation::links([
