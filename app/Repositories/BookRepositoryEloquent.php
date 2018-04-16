@@ -17,6 +17,7 @@ use CodePub\Validators\BookValidator;
 class BookRepositoryEloquent extends BaseRepository implements BookRepository
 {
     use CriteriaOnlyTrashedTrait;
+    use RepositoryRestoreTrait;
 
     #definir parametros para buscar.
     protected $fieldSearchable = [

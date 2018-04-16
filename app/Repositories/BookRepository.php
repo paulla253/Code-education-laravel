@@ -11,7 +11,11 @@ use Prettus\Repository\Contracts\RepositoryInterface;
  *
  * @package namespace CodePub\Repositories;
  */
-interface BookRepository extends RepositoryInterface, RepositoryCriteriaInterface, CriteriaOnlyTrashedInterface
+interface BookRepository extends
+    RepositoryInterface,
+    RepositoryCriteriaInterface,
+    CriteriaOnlyTrashedInterface,
+    RepositoryRestoreInterface
 {
     //
 }

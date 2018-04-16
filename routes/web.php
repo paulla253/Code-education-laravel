@@ -27,7 +27,7 @@ Route::group(['middleware'=>'auth'],function(){
     #agregar nomes as rotas filhas de trashed.
     Route::group(['prefix'=>'trashed','as'=>'trashed.'],function(){
         Route::resource('books','BooksTrashedController',['except' =>
-            ['create','store','edit','update','destroy']]);
+            ['create','store','edit','destroy']]);
     });
 });
 
