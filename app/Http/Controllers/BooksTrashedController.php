@@ -2,8 +2,6 @@
 
 namespace CodePub\Http\Controllers;
 
-
-use CodePub\Models\Book;
 use CodePub\Repositories\BookRepository;
 use Illuminate\Http\Request;
 
@@ -27,9 +25,9 @@ class BooksTrashedController extends Controller
     {
         $search = $request->get('search');
 
-        $books=Book::onlyTrashed()->paginate(10);
-        #$books = $this->repository->paginate(10);
+        #metodo onlyTrashed implementando.
+        $books = $this->repository->onlyTrashed()->paginate(10);
+
         return view('trashed.books.index', compact('books', 'search'));
     }
-
 }

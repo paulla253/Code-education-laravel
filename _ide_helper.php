@@ -1,7 +1,7 @@
 <?php
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.3.31 on 2018-04-09 10:44:30.
+ * Generated for Laravel 5.3.31 on 2018-04-15 23:46:49.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -1519,7 +1519,7 @@ namespace Illuminate\Support\Facades {
         /**
          * Get the currently authenticated user.
          *
-         * @return \CodePub\Models\User|null
+         * @return \CodePub\Models\User|null 
          * @static 
          */ 
         public static function user()
@@ -1632,7 +1632,7 @@ namespace Illuminate\Support\Facades {
          *
          * @param mixed $id
          * @param bool $remember
-         * @return \CodePub\Models\User|false
+         * @return \CodePub\Models\User|false 
          * @static 
          */ 
         public static function loginUsingId($id, $remember = false)
@@ -1644,7 +1644,7 @@ namespace Illuminate\Support\Facades {
          * Log the given user ID into the application without sessions or cookies.
          *
          * @param mixed $id
-         * @return \CodePub\Models\User|false
+         * @return \CodePub\Models\User|false 
          * @static 
          */ 
         public static function onceUsingId($id)
@@ -1747,7 +1747,7 @@ namespace Illuminate\Support\Facades {
         /**
          * Return the currently cached user.
          *
-         * @return \CodePub\Models\User|null
+         * @return \CodePub\Models\User|null 
          * @static 
          */ 
         public static function getUser()
@@ -1793,7 +1793,7 @@ namespace Illuminate\Support\Facades {
         /**
          * Get the last user we attempted to authenticate.
          *
-         * @return \CodePub\Models\User
+         * @return \CodePub\Models\User 
          * @static 
          */ 
         public static function getLastAttempted()
@@ -1837,7 +1837,7 @@ namespace Illuminate\Support\Facades {
         /**
          * Determine if the current user is authenticated.
          *
-         * @return \CodePub\Models\User
+         * @return \CodePub\Models\User 
          * @throws \Illuminate\Auth\AuthenticationException
          * @static 
          */ 
