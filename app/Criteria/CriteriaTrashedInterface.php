@@ -2,7 +2,8 @@
 
 namespace CodePub\Criteria;
 
-interface CriteriaOnlyTrashedInterface
+interface CriteriaTrashedInterface
 {
     public function onlyTrashed();
+    public function withTrashed();
 }

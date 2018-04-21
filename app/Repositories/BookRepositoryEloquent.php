@@ -2,12 +2,10 @@
 
 namespace CodePub\Repositories;
 
-use CodePub\Criteria\CriteriaOnlyTrashedTrait;
+use CodePub\Criteria\CriteriaTrashedTrait;
 use Prettus\Repository\Eloquent\BaseRepository;
 use Prettus\Repository\Criteria\RequestCriteria;
-use CodePub\Repositories\BookRepository;
 use CodePub\Models\Book;
-use CodePub\Validators\BookValidator;
 
 /**
  * Class BookRepositoryEloquent.
@@ -16,7 +14,7 @@ use CodePub\Validators\BookValidator;
  */
 class BookRepositoryEloquent extends BaseRepository implements BookRepository
 {
-    use CriteriaOnlyTrashedTrait;
+    use CriteriaTrashedTrait;
     use RepositoryRestoreTrait;
 
     #definir parametros para buscar.
@@ -25,7 +23,6 @@ class BookRepositoryEloquent extends BaseRepository implements BookRepository
          #nome da relação + o campo.
         'author.name' =>'like',
         'categories.name'=>'like'
-
     ];
 
     #sobrescrever esse metodo.
@@ -42,7 +39,6 @@ class BookRepositoryEloquent extends BaseRepository implements BookRepository
         $model->categories()->sync($attributes['categories']);
     }
 
-
     /**
      * Specify Model class name
      *
@@ -53,8 +49,6 @@ class BookRepositoryEloquent extends BaseRepository implements BookRepository
         return Book::class;
     }
 
-    
-
     /**
      * Boot up the repository, pushing criteria
      */
@@ -62,5 +56,4 @@ class BookRepositoryEloquent extends BaseRepository implements BookRepository
     {
         $this->pushCriteria(app(RequestCriteria::class));
     }
-    
 }

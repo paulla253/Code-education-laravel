@@ -18,6 +18,13 @@ class Category extends Model implements  TableInterface
        'name'
     ];
 
+    public function getNameTrashedAttribute()
+    {
+
+        return $this->trashed() ? "{$this->name}(Inativa)":$this->name;
+        
+    }
+    
     #relacionamento de categoria e livro
     public function books()
     {

@@ -2,6 +2,7 @@
 
 namespace CodePub\Repositories;
 
+use CodePub\Criteria\CriteriaTrashedInterface;
 use Prettus\Repository\Contracts\RepositoryInterface;
 
 /**
@@ -9,7 +10,7 @@ use Prettus\Repository\Contracts\RepositoryInterface;
  *
  * @package namespace CodePub\Repositories;
  */
-interface CategoryRepository extends RepositoryInterface
+interface CategoryRepository extends RepositoryInterface, CriteriaTrashedInterface
 {
-    //
+    public function listsWithMutators($column, $key=null);
 }
