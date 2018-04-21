@@ -90,16 +90,10 @@ class BooksController extends Controller
      */
     public function update(BookUpdateRequest $request, $id)
     {
-
-//        return "teste";
-//        dd($request);
-
         #não pegar o author_id passado na requisição.
         $data= $request->except(['author_id']);
         $this->categoryRequest->lists('name','id');
         $this->repository->update($data,$id);
-
-
 
         $url=$request->get('redirect_to',route('books.index'));
         $request->session()->flash('message','Livro editado com sucesso.');

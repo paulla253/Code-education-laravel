@@ -23,12 +23,13 @@ class Book extends Model  implements  TableInterface
 
     #muitos para um
     public function author(){
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class)->withTrashed();
     }
 
     #relacionamento de categoria e livro
     public function categories()
     {
+        #with -> relacionar o lixo da categoria.
         return $this->belongsToMany(Category::class)->withTrashed();
     }
 
