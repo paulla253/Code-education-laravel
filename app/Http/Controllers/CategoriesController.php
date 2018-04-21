@@ -27,7 +27,7 @@ class CategoriesController extends Controller
         $categories=Category::withTrashed()->paginate(10);
 
         #pegar apenas registros excluidos
-       $categories=Category::onlyTrashed()->paginate(10);
+       #$categories=Category::onlyTrashed()->paginate(10);
 
 
         $search=$request->get('search');
@@ -37,7 +37,7 @@ class CategoriesController extends Controller
         // tem que configrar na view :  {{$categories->links()}}
 
         #utilizando o repository para paginação
-        #$categories = $this->repository->paginate(10);
+        $categories = $this->repository->paginate(10);
 
         return view('.categories.index',compact('categories','search'));
     }

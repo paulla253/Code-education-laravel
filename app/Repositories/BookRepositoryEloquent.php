@@ -35,6 +35,13 @@ class BookRepositoryEloquent extends BaseRepository implements BookRepository
         return $model;
     }
 
+    public function update(array $attributes,$id)
+    {
+        $model =  parent::update($attributes,$id);
+        $model->categories()->sync($attributes['categories']);
+    }
+
+
     /**
      * Specify Model class name
      *

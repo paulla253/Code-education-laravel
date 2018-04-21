@@ -29,7 +29,7 @@ class Book extends Model  implements  TableInterface
     #relacionamento de categoria e livro
     public function categories()
     {
-        return $this->belongsToMany(Category::class);
+        return $this->belongsToMany(Category::class)->withTrashed();
     }
 
     #precisa começar com form.
