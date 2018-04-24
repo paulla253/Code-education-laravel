@@ -1,0 +1,15 @@
+{
+    "name": "paulla253/codeedubook",
+    "description": "",
+    "authors": [
+        {
+            "name": "Ana Paula Fernandes",
+            "email": "paula253@hotmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "CodeEduBook\\": ""
+        }
+    }
+}
