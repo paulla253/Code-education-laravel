@@ -38,6 +38,7 @@ class RouteServiceProvider extends ServiceProvider
             'namespace' => $this->rootUrlNamespace],
             function(){
                 require __DIR__.'/../Http/routes.php';
+
         });
     }
 }
