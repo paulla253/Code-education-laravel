@@ -11,7 +11,10 @@ return [
     |
     */
 
+<<<<<<< HEAD
     #deixar vazio.
+=======
+>>>>>>> 61e510a
     'namespace' => '',
 
     /*

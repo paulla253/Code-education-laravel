@@ -174,8 +174,12 @@ return [
         \Nwidart\Modules\LaravelModulesServiceProvider::class,
         //
 
+<<<<<<< HEAD
         CodeEduBook\Providers\CodeEduBookServiceProvider::class,
 
+=======
+        \CodeEduBook\Providers\CodeEduBookServiceProvider::class,
+>>>>>>> 61e510a
 
 
         /*
@@ -264,6 +268,10 @@ return [
         'Tabbable' => Bootstrapper\Facades\Tabbable::class,
         'Table' => Bootstrapper\Facades\Table::class,
         'Thumbnail' => Bootstrapper\Facades\Thumbnail::class,
+<<<<<<< HEAD
         'Module' =>\Nwidart\Modules\Facades\Module::class,
+=======
+        'Module'=> \Nwidart\Modules\Facades\Module::class,
+>>>>>>> 61e510a
     ],
 ];

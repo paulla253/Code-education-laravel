@@ -3,7 +3,11 @@ namespace PHPSTORM_META {
 
    /**
     * PhpStorm Meta file, to provide autocomplete information for PhpStorm
+<<<<<<< HEAD
     * Generated on 2018-04-23 17:42:51.
+=======
+    * Generated on 2018-04-25 17:51:10.
+>>>>>>> 61e510a
     *
     * @author Barry vd. Heuvel <barryvdh@gmail.com>
     * @see https://github.com/barryvdh/laravel-ide-helper
